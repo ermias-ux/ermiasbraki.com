@@ -86,6 +86,11 @@
             color: var(--text-primary);
         }
 
+        .site-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
         .site-subtitle {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.875rem;
@@ -431,6 +436,12 @@
             gap: 0;
         }
 
+        .case-study-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         .case-study-item {
             display: flex;
             justify-content: space-between;
@@ -457,12 +468,12 @@
             border-bottom: none;
         }
 
-        .case-study-item:hover {
+        .case-study-link:hover .case-study-item {
             padding-left: 2rem;
             background: rgba(15, 29, 47, 0.3);
         }
 
-        .case-study-item:hover::before {
+        .case-study-link:hover .case-study-item::before {
             transform: scaleY(1);
         }
 
@@ -591,7 +602,7 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="site-title">Ermias Braki</h1>
+            <h1 class="site-title"><a href="index.html">Ermias Braki</a></h1>
             <p class="site-subtitle">Independent Narrative Risk Analyst</p>
             <nav>
                 <a href="#predictions">Predictions</a>
@@ -792,45 +803,55 @@
                 <h2 class="section-title">Case Studies</h2>
 
                 <div class="case-study-list">
-                    <div class="case-study-item">
-                        <div>
-                            <h3 class="case-study-title">Lululemon: $8B revenue growth destroyed premium positioning</h3>
-                            <p class="case-study-desc">Expanded from yoga studios to mass market. Diluted brand equity that justified price premium.</p>
+                    <a href="https://medium.com/@ermiasbraki/lululemon-how-8b-in-revenue-growth-destroyed-what-made-them-worth-a-premium-85c7d1fcef20" class="case-study-link">
+                        <div class="case-study-item">
+                            <div>
+                                <h3 class="case-study-title">Lululemon: $8B revenue growth destroyed premium positioning</h3>
+                                <p class="case-study-desc">Expanded from yoga studios to mass market. Diluted brand equity that justified price premium.</p>
+                            </div>
+                            <span class="case-study-year">2026</span>
                         </div>
-                        <span class="case-study-year">2026</span>
-                    </div>
+                    </a>
 
-                    <div class="case-study-item">
-                        <div>
-                            <h3 class="case-study-title">Dos Equis: Killed "Most Interesting Man" to chase millennials</h3>
-                            <p class="case-study-desc">Lost narrative authority. Bringing him back at 87 after 10 years. Resurrection or reminder they killed it? Answer by end of 2026.</p>
+                    <a href="https://medium.com/@ermiasbraki/dos-equis-killed-the-most-interesting-man-to-chase-millennials-acdd78bd3235" class="case-study-link">
+                        <div class="case-study-item">
+                            <div>
+                                <h3 class="case-study-title">Dos Equis: Killed "Most Interesting Man" to chase millennials</h3>
+                                <p class="case-study-desc">Lost narrative authority. Bringing him back at 87 after 10 years. Resurrection or reminder they killed it? Answer by end of 2026.</p>
+                            </div>
+                            <span class="case-study-year">2026</span>
                         </div>
-                        <span class="case-study-year">2026</span>
-                    </div>
+                    </a>
 
-                    <div class="case-study-item">
-                        <div>
-                            <h3 class="case-study-title">Nike: Strategic narrative coherence drives market confidence</h3>
-                            <p class="case-study-desc">$6B market cap gain under Elliott Hill. Authority to reclaim positioning.</p>
+                    <a href="https://medium.com/@ermiasbraki/nike-how-strategic-narrative-risk-drove-stock-to-all-time-highs-6e65226927a8" class="case-study-link">
+                        <div class="case-study-item">
+                            <div>
+                                <h3 class="case-study-title">Nike: Strategic narrative coherence drives market confidence</h3>
+                                <p class="case-study-desc">$6B market cap gain under Elliott Hill. Authority to reclaim positioning.</p>
+                            </div>
+                            <span class="case-study-year">2024</span>
                         </div>
-                        <span class="case-study-year">2024</span>
-                    </div>
+                    </a>
 
-                    <div class="case-study-item">
-                        <div>
-                            <h3 class="case-study-title">Bud Light: $400M collapse from weak narrative foundations</h3>
-                            <p class="case-study-desc">Small contradictions compound into public failure when positioning lacks defense.</p>
+                    <a href="https://medium.com/@ermiasbraki" class="case-study-link">
+                        <div class="case-study-item">
+                            <div>
+                                <h3 class="case-study-title">Bud Light: $400M collapse from weak narrative foundations</h3>
+                                <p class="case-study-desc">Small contradictions compound into public failure when positioning lacks defense.</p>
+                            </div>
+                            <span class="case-study-year">2023</span>
                         </div>
-                        <span class="case-study-year">2023</span>
-                    </div>
+                    </a>
 
-                    <div class="case-study-item">
-                        <div>
-                            <h3 class="case-study-title">Starbucks: Identity concentration risk after founder departure</h3>
-                            <p class="case-study-desc">Meaning remained tied to founder, could not be sustained by institution. Ongoing.</p>
+                    <a href="https://medium.com/@ermiasbraki/starbucks-why-starbucks-still-cannot-operate-without-its-founder-359552d19119" class="case-study-link">
+                        <div class="case-study-item">
+                            <div>
+                                <h3 class="case-study-title">Starbucks: Identity concentration risk after founder departure</h3>
+                                <p class="case-study-desc">Meaning remained tied to founder, could not be sustained by institution. Ongoing.</p>
+                            </div>
+                            <span class="case-study-year">2022-Present</span>
                         </div>
-                        <span class="case-study-year">2022-Present</span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
