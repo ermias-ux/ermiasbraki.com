@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ermias Braki | Narrative Risk Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a1628;
+            --secondary-dark: #162238;
+            --accent-blue: #2563eb;
+            --accent-light: #3b82f6;
+            --accent-bright: #60a5fa;
+            --text-primary: #e8eaed;
+            --text-secondary: #9ca3af;
+            --border-color: #1e3a5f;
+            --card-bg: #0f1d2f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border-color);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .site-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .site-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        nav {
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-light);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-blue);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+
+        .hero-statement {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-statement strong {
+            background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 1.625rem;
+            display: inline-block;
+        }
+
+        .value-prop {
+            max-width: 800px;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(15, 29, 47, 0.8) 0%, rgba(10, 22, 40, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 4px;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-prop::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .value-prop p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-prop p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 1.25rem;
+            background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Active Predictions */
+        .section {
+            padding: 4rem 0;
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        .section-header {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-light);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-blue), transparent);
+        }
+
+        .section-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+            letter-spacing: -0.02em;
+        }
+
+        .predictions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .prediction-card {
+            background: linear-gradient(135deg, rgba(15, 29, 47, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prediction-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-light), var(--accent-bright));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .prediction-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            transform: translateY(-50%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .prediction-card:hover::after {
+            opacity: 1;
+        }
+
+        .prediction-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .prediction-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
+            background: linear-gradient(135deg, rgba(15, 29, 47, 0.9) 0%, rgba(10, 22, 40, 0.95) 100%);
+        }
+
+        .prediction-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.01em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .prediction-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-light);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+        }
+
+        .prediction-detail {
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .prediction-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            min-width: 95px;
+            font-weight: 600;
+        }
+
+        .prediction-value {
+            font-size: 0.9375rem;
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .prediction-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.25rem;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.1));
+            border: 1px solid var(--accent-blue);
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-bright);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background: var(--accent-bright);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 8px var(--accent-light);
+        }
+
+        .prediction-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+        }
+
+        .prediction-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .prediction-link:hover {
+            color: var(--accent-bright);
+        }
+
+        .prediction-link:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* Case Studies Preview */
+        .case-studies {
+            background: linear-gradient(135deg, rgba(15, 29, 47, 0.4) 0%, rgba(10, 22, 40, 0.6) 100%);
+            backdrop-filter: blur(20px);
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .case-studies::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+        }
+
+        .case-study-list {
+            display: grid;
+            gap: 0;
+        }
+
+        .case-study-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid rgba(30, 58, 95, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .case-study-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-blue), var(--accent-light));
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .case-study-item:last-child {
+            border-bottom: none;
+        }
+
+        .case-study-item:hover {
+            padding-left: 2rem;
+            background: rgba(15, 29, 47, 0.3);
+        }
+
+        .case-study-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .case-study-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.01em;
+        }
+
+        .case-study-desc {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.7;
+        }
+
+        .case-study-year {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--accent-light);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0 3rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 6rem;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.9375rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .site-title {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 4rem 0;
+            }
+
+            .hero-statement {
+                font-size: 1.25rem;
+            }
+
+            .predictions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="site-title">Ermias Braki</h1>
+            <p class="site-subtitle">Independent Narrative Risk Analyst</p>
+            <nav>
+                <a href="#predictions">Predictions</a>
+                <a href="#cases">Case Studies</a>
+                <a href="track-record.html">Track Record</a>
+                <a href="services.html">Services</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-statement">
+                    In 2023, Bud Light lost $400 million in revenue over six weeks. In 2024, Nike gained $6 billion in market cap under Elliott Hill after years of decline under John Donahoe. Both faced critical positioning decisions. One had the authority to make the claim. The other didn't. <strong>The difference wasn't execution. It was defensibility.</strong>
+                </div>
+
+                <div class="value-prop">
+                    <p>I identify the gap between what boards approve and what markets defend.</p>
+                    <p>Leaders optimize for stakeholder consensus. They don't always assess whether customers will defend those decisions under pressure.</p>
+                    <p>I find these contradictions before they become crises.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="predictions">
+            <div class="container">
+                <div class="section-header">Active Analysis</div>
+                <h2 class="section-title">Predictions In Progress</h2>
+
+                <div class="predictions-grid">
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">Vital Farms Premium Positioning</h3>
+                        <div class="prediction-date">February 4, 2026</div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Decision:</span>
+                            <span class="prediction-value">5 AM Super Bowl ad during scrutiny over premium justification ($7 to $8 vs $3 to $4 conventional)</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Prediction:</span>
+                            <span class="prediction-value">Q4 2026: Pricing power erodes OR explicit repositioning to ethics vs nutrition</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Falsifiable:</span>
+                            <span class="prediction-value">Q4 2026 earnings call</span>
+                        </div>
+
+                        <div class="prediction-status">
+                            <span class="status-dot"></span>
+                            In Progress
+                        </div>
+                        
+                        <a href="https://medium.com/@ermiasbraki" class="prediction-link">Read Full Analysis</a>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">Target CEO Transition</h3>
+                        <div class="prediction-date">February 1, 2026</div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Decision:</span>
+                            <span class="prediction-value">23 year insider promoted over external disruption</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Prediction:</span>
+                            <span class="prediction-value">Operational improvements without strategic repositioning. Sales remain flat through 2026.</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Falsifiable:</span>
+                            <span class="prediction-value">Q4 2026 earnings</span>
+                        </div>
+
+                        <div class="prediction-status">
+                            <span class="status-dot"></span>
+                            In Progress
+                        </div>
+                        
+                        <a href="https://medium.com/@ermiasbraki/targets-ceo-transition-when-continuity-becomes-the-risk-c8fa80b71df9" class="prediction-link">Read Full Analysis</a>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">PayPal CEO Appointment</h3>
+                        <div class="prediction-date">February 4, 2026</div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Decision:</span>
+                            <span class="prediction-value">Cost-cutter replaces growth CEO after 2.5 years</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Prediction:</span>
+                            <span class="prediction-value">Margins improve but revenue continues declining. Product problem disguised as execution issue.</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Falsifiable:</span>
+                            <span class="prediction-value">Q3 2027</span>
+                        </div>
+
+                        <div class="prediction-status">
+                            <span class="status-dot"></span>
+                            In Progress
+                        </div>
+                        
+                        <a href="#" class="prediction-link">Read Full Analysis</a>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">Disney CEO Appointment</h3>
+                        <div class="prediction-date">February 4, 2026</div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Decision:</span>
+                            <span class="prediction-value">Parks chief promoted over content leader</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Prediction:</span>
+                            <span class="prediction-value">Parks continue performing on legacy IP. Content pipeline stays broken. Future attractions lack foundation.</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Falsifiable:</span>
+                            <span class="prediction-value">2028</span>
+                        </div>
+
+                        <div class="prediction-status">
+                            <span class="status-dot"></span>
+                            In Progress
+                        </div>
+                        
+                        <a href="#" class="prediction-link">Read Full Analysis</a>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">Jaguar Rebrand</h3>
+                        <div class="prediction-date">November 2024 - 2029</div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Decision:</span>
+                            <span class="prediction-value">Destroyed 102 years of heritage. Stopped all production. Ultra-luxury repositioning without brand equity.</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Prediction:</span>
+                            <span class="prediction-value">First-year sales <5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Falsifiable:</span>
+                            <span class="prediction-value">2026 sales, 2027 review, 2029 survival</span>
+                        </div>
+
+                        <div class="prediction-status">
+                            <span class="status-dot"></span>
+                            In Progress
+                        </div>
+                        
+                        <a href="https://medium.com/@ermiasbraki/jaguar-will-fail-by-2029-when-leaders-optimize-for-approval-over-defense-3ebe3bc85d5b" class="prediction-link">Read Full Analysis</a>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">UPS Amazon Exit</h3>
+                        <div class="prediction-date">February 2026</div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Decision:</span>
+                            <span class="prediction-value">Cut 78k jobs, ended Amazon partnership (1B+ packages/year), $6.5B cost cuts</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Prediction:</span>
+                            <span class="prediction-value">Lost $2.2B contribution to fixed costs. Network utilization problems. Can't replace Amazon volume. Margins flat/down by Q4 2026.</span>
+                        </div>
+                        
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Falsifiable:</span>
+                            <span class="prediction-value">Q4 2026 earnings (Feb 2027)</span>
+                        </div>
+
+                        <div class="prediction-status">
+                            <span class="status-dot"></span>
+                            In Progress
+                        </div>
+                        
+                        <a href="https://medium.com/@ermiasbraki/ups-cuts-30-000-jobs-to-end-amazon-partnership-bold-leadership-or-cost-cutting-disguised-as-4ce026c5df31" class="prediction-link">Read Full Analysis</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies" id="cases">
+            <div class="container">
+                <div class="section-header">Past Analysis</div>
+                <h2 class="section-title">Case Studies</h2>
+
+                <div class="case-study-list">
+                    <div class="case-study-item">
+                        <div>
+                            <h3 class="case-study-title">Lululemon: $8B revenue growth destroyed premium positioning</h3>
+                            <p class="case-study-desc">Expanded from yoga studios to mass market. Diluted brand equity that justified price premium.</p>
+                        </div>
+                        <span class="case-study-year">2026</span>
+                    </div>
+
+                    <div class="case-study-item">
+                        <div>
+                            <h3 class="case-study-title">Dos Equis: Killed "Most Interesting Man" to chase millennials</h3>
+                            <p class="case-study-desc">Lost narrative authority. Bringing him back at 87 after 10 years. Resurrection or reminder they killed it? Answer by end of 2026.</p>
+                        </div>
+                        <span class="case-study-year">2026</span>
+                    </div>
+
+                    <div class="case-study-item">
+                        <div>
+                            <h3 class="case-study-title">Nike: Strategic narrative coherence drives market confidence</h3>
+                            <p class="case-study-desc">$6B market cap gain under Elliott Hill. Authority to reclaim positioning.</p>
+                        </div>
+                        <span class="case-study-year">2024</span>
+                    </div>
+
+                    <div class="case-study-item">
+                        <div>
+                            <h3 class="case-study-title">Bud Light: $400M collapse from weak narrative foundations</h3>
+                            <p class="case-study-desc">Small contradictions compound into public failure when positioning lacks defense.</p>
+                        </div>
+                        <span class="case-study-year">2023</span>
+                    </div>
+
+                    <div class="case-study-item">
+                        <div>
+                            <h3 class="case-study-title">Starbucks: Identity concentration risk after founder departure</h3>
+                            <p class="case-study-desc">Meaning remained tied to founder, could not be sustained by institution. Ongoing.</p>
+                        </div>
+                        <span class="case-study-year">2022-Present</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="approach">
+            <div class="container">
+                <div class="section-header">Methodology</div>
+                <h2 class="section-title">Approach</h2>
+
+                <div class="value-prop" style="max-width: 900px;">
+                    <p>Every organization tells a story. They only face backlash when that story can't be defended.</p>
+                    <p>Proximity to problems blinds leadership. They optimize for stakeholder approval instead of asking whether customers will believe what they're promising.</p>
+                    <p style="color: var(--accent-light); font-size: 1.125rem;">I identify these gaps before they surface as crises, when adjustment is still possible without reputational or operational fallout.</p>
+                    <p style="font-size: 1rem; margin-top: 2rem; color: var(--text-secondary);">Available globally for narrative risk assessment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Analysis</h3>
+                    <div class="footer-links">
+                        <a href="https://medium.com/@ermiasbraki" target="_blank">Medium</a>
+                        <a href="https://www.linkedin.com/in/ermiasbraki" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>For narrative risk assessment inquiries:</p>
+                    <a href="/cdn-cgi/l/email-protection#1e7b6c73777f6d5e7b6c73777f6d7c6c7f7577307d7173"><span class="__cf_email__" data-cfemail="d3b6a1bebab2a093b6a1bebab2a0b1a1b2b8bafdb0bcbe">[email&#160;protected]</span></a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>L

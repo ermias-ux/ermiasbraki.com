@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Ermias Braki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a1628;
+            --secondary-dark: #162238;
+            --accent-blue: #2563eb;
+            --accent-light: #3b82f6;
+            --accent-bright: #60a5fa;
+            --text-primary: #e8eaed;
+            --text-secondary: #9ca3af;
+            --border-color: #1e3a5f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border-color);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .site-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .site-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .site-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        nav {
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-light);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-blue);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .page-header {
+            padding: 6rem 0 4rem;
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+
+        .page-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+            letter-spacing: -0.02em;
+        }
+
+        .page-description {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .page-intro {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            max-width: 800px;
+            line-height: 1.8;
+            margin-top: 2rem;
+        }
+
+        .services-grid {
+            padding: 4rem 0;
+            display: grid;
+            gap: 3rem;
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(15, 29, 47, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
+        }
+
+        .service-header {
+            margin-bottom: 2rem;
+        }
+
+        .service-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .service-section {
+            margin-bottom: 2rem;
+        }
+
+        .service-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-section-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-light);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-section li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .service-section li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        .service-pricing {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .service-price {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-bright);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-price-note {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .service-timeline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--accent-light);
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .contact-section {
+            padding: 4rem 0;
+            text-align: center;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(15, 29, 47, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .contact-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .contact-email {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.125rem;
+            color: var(--accent-light);
+            text-decoration: none;
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: 1px solid var(--accent-blue);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-email:hover {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--accent-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 4rem 0 3rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 6rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.9375rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .site-title {
+                font-size: 2rem;
+            }
+
+            .page-title {
+                font-size: 2.25rem;
+            }
+
+            .page-header {
+                padding: 4rem 0 3rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .service-card {
+                padding: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="site-title"><a href="index.html">Ermias Braki</a></h1>
+            <p class="site-subtitle">Independent Narrative Risk Analyst</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#predictions">Predictions</a>
+                <a href="index.html#cases">Case Studies</a>
+                <a href="track-record.html">Track Record</a>
+                <a href="services.html" class="active">Services</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Private Assessment</h1>
+                <p class="page-description">
+                    Most analysis here is public. For decisions that can't be evaluated publicly (upcoming acquisitions, leadership transitions, rebrands, crisis response), I provide confidential narrative risk assessment.
+                </p>
+                <p class="page-intro">
+                    Pricing reflects the gravity of the decision and the cost of getting it wrong. Not billed by the hour. Not billed by page count. Each engagement is scoped around a specific decision where narrative contradictions could undermine trust, strategy, or execution.
+                </p>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            <div class="container">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2 class="service-title">Directional Assessment</h2>
+                        <p class="service-subtitle">A preliminary evaluation to determine whether narrative risk exists and where it's concentrated.</p>
+                    </div>
+
+                    <div class="service-section">
+                        <h3 class="service-section-title">What's Included</h3>
+                        <ul>
+                            <li>3 to 5 page assessment identifying core contradictions and primary exposure points</li>
+                            <li>Risk classification (manageable / significant / existential)</li>
+                            <li>Recommendation on whether full diagnostic is warranted</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3 class="service-section-title">What's Not Included</h3>
+                        <ul>
+                            <li>Scenario modeling, stakeholder interpretation analysis, or decision frameworks</li>
+                            <li>Based on publicly available information only</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-pricing">
+                        <div class="service-price">$5,000</div>
+                        <div class="service-price-note">Waived for qualified referrals</div>
+                        <div class="service-timeline">Timeline: 48 to 72 hours</div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2 class="service-title">Complete Narrative Risk Assessment</h2>
+                        <p class="service-subtitle">An independent, forensic examination of the narrative architecture surrounding a high-stakes decision.</p>
+                    </div>
+
+                    <div class="service-section">
+                        <h3 class="service-section-title">What's Included</h3>
+                        <ul>
+                            <li>12 to 18 page diagnostic covering narrative contradictions and hidden assumptions</li>
+                            <li>Stakeholder interpretation forecasts</li>
+                            <li>Scenario analysis (best case / base case / worst case)</li>
+                            <li>Constraint analysis and decision trade-offs</li>
+                            <li>Recommendations on whether to proceed, modify, or decline</li>
+                            <li>90 minute readout call to discuss findings and answer questions</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-section">
+                        <h3 class="service-section-title">What's Not Included</h3>
+                        <ul>
+                            <li>Implementation, ongoing advisory, messaging execution, or crisis response</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-pricing">
+                        <div class="service-price">$20,000 to $75,000</div>
+                        <div class="service-price-note">
+                            Fortune 500 / Public Company: $45,000 to $75,000<br>
+                            Late-Stage Startup (Series C+): $30,000 to $50,000<br>
+                            Mid-Market Company: $20,000 to $35,000<br>
+                            Individual (public figure, executive): $15,000 to $25,000
+                        </div>
+                        <div class="service-timeline">Timeline: 7 to 10 business days</div>
+                        <div class="service-timeline" style="margin-top: 0.5rem;">Expedited: 72hrs +50% / 48hrs +100% / 24hrs +200%</div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2 class="service-title">Post-Crisis Narrative Forensic</h2>
+                        <p class="service-subtitle">After a public controversy or trust failure, a forensic analysis of what happened and what must change to prevent recurrence.</p>
+                    </div>
+
+                    <div class="service-section">
+                        <h3 class="service-section-title">What's Included</h3>
+                        <ul>
+                            <li>18 to 25 page report covering what narrative contradictions existed before the crisis</li>
+                            <li>How the crisis unfolded along predictable fault lines</li>
+                            <li>Root cause analysis (structural vs. tactical failures)</li>
+                            <li>What must change to restore coherence without creating new contradictions</li>
+                            <li>2 hour executive presentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-pricing">
+                        <div class="service-price">$50,000 to $100,000</div>
+                        <div class="service-price-note">
+                            Mid-Market Company: $50,000<br>
+                            Public Company / Fortune 500: $75,000 to $100,000
+                        </div>
+                        <div class="service-timeline">Timeline: 10 to 14 business days</div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h2 class="service-title">Annual Narrative Risk Retainer</h2>
+                        <p class="service-subtitle">Proactive narrative risk management for organizations operating in sustained high-exposure environments.</p>
+                    </div>
+
+                    <div class="service-section">
+                        <h3 class="service-section-title">What's Included</h3>
+                        <ul>
+                            <li>4 quarterly narrative health assessments (10 to 12 pages each + readout call)</li>
+                            <li>Up to 6 pre-decision rapid assessments per year (48 hour turnaround)</li>
+                            <li>Unlimited advisory access on emerging situations (24 hour response time)</li>
+                            <li>Annual narrative architecture review with executive presentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-pricing">
+                        <div class="service-price">$150,000 to $300,000/year</div>
+                        <div class="service-price-note">
+                            Mid-Market (<$500M revenue): $150,000/year<br>
+                            Public Company ($500M–$5B): $200,000/year<br>
+                            Fortune 500: $300,000/year
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-box">
+                    <h2 class="contact-title">Get Started</h2>
+                    <p class="contact-description">
+                        For narrative risk assessment inquiries, contact:
+                    </p>
+                    <a href="mailto:ermias@ermiasbraki.com" class="contact-email">ermias@ermiasbraki.com</a>
+                    <div class="contact-info">
+                        Please include:<br>
+                        Brief context on the decision or situation under consideration<br>
+                        Organizational type and scale<br>
+                        Timeline or urgency<br><br>
+                        All communication is handled confidentially.<br>
+                        Initial consultations are conducted to determine fit and scope before engagement.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Analysis</h3>
+                    <div class="footer-links">
+                        <a href="https://medium.com/@ermiasbraki" target="_blank">Medium</a>
+                        <a href="https://www.linkedin.com/in/ermiasbraki" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>For narrative risk assessment inquiries:</p>
+                    <a href="mailto:ermias@ermiasbraki.com">ermias@ermiasbraki.com</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Location</h3>
+                    <p>Available globally</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
