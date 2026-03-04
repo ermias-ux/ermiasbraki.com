@@ -50,11 +50,7 @@
             --card-bg: #0f1d2f;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Work Sans', sans-serif;
@@ -68,10 +64,7 @@
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background-image: 
                 radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
@@ -82,10 +75,7 @@
         body::after {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             opacity: 0.3;
             pointer-events: none;
@@ -100,7 +90,6 @@
             padding: 0 2rem;
         }
 
-        /* Header */
         header {
             padding: 3rem 0 2rem;
             border-bottom: 1px solid var(--border-color);
@@ -116,10 +105,7 @@
             color: var(--text-primary);
         }
 
-        .site-title a {
-            color: var(--text-primary);
-            text-decoration: none;
-        }
+        .site-title a { color: var(--text-primary); text-decoration: none; }
 
         .site-subtitle {
             font-family: 'JetBrains Mono', monospace;
@@ -129,11 +115,7 @@
             letter-spacing: 0.1em;
         }
 
-        nav {
-            margin-top: 2rem;
-            display: flex;
-            gap: 2rem;
-        }
+        nav { margin-top: 2rem; display: flex; gap: 2rem; }
 
         nav a {
             font-family: 'JetBrains Mono', monospace;
@@ -146,26 +128,19 @@
             position: relative;
         }
 
-        nav a:hover {
-            color: var(--accent-light);
-        }
+        nav a:hover { color: var(--accent-light); }
 
         nav a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
             background: var(--accent-blue);
             transition: width 0.3s ease;
         }
 
-        nav a:hover::after {
-            width: 100%;
-        }
+        nav a:hover::after { width: 100%; }
 
-        /* Hero Section */
         .hero {
             padding: 6rem 0;
             animation: fadeIn 1s ease-out 0.2s both;
@@ -178,7 +153,7 @@
             max-width: 900px;
             margin-bottom: 3rem;
             color: var(--text-primary);
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         .hero-statement strong {
@@ -194,12 +169,12 @@
         .value-prop {
             max-width: 800px;
             padding: 2.5rem;
-            background: linear-gradient(135deg, rgba(15, 29, 47, 0.8) 0%, rgba(10, 22, 40, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(15,29,47,0.8) 0%, rgba(10,22,40,0.9) 100%);
             backdrop-filter: blur(10px);
             border-left: 4px solid var(--accent-blue);
             border-radius: 4px;
             margin-bottom: 3rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
             position: relative;
             overflow: hidden;
         }
@@ -207,11 +182,9 @@
         .value-prop::before {
             content: '';
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            top: 0; right: 0;
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -234,7 +207,6 @@
             background-clip: text;
         }
 
-        /* Active Predictions */
         .section {
             padding: 4rem 0;
             animation: fadeIn 1s ease-out 0.4s both;
@@ -256,10 +228,8 @@
         .section-header::after {
             content: '';
             position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 60px;
-            height: 2px;
+            bottom: -1px; left: 0;
+            width: 60px; height: 2px;
             background: linear-gradient(90deg, var(--accent-blue), transparent);
         }
 
@@ -269,7 +239,7 @@
             font-weight: 700;
             margin-bottom: 3rem;
             color: var(--text-primary);
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
             letter-spacing: -0.02em;
         }
 
@@ -281,12 +251,12 @@
         }
 
         .prediction-card {
-            background: linear-gradient(135deg, rgba(15, 29, 47, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(15,29,47,0.6) 0%, rgba(10,22,40,0.8) 100%);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 2rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
             position: relative;
             overflow: hidden;
         }
@@ -294,43 +264,34 @@
         .prediction-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
             background: linear-gradient(90deg, var(--accent-blue), var(--accent-light), var(--accent-bright));
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
         }
 
         .prediction-card::after {
             content: '';
             position: absolute;
-            top: 50%;
-            right: 20px;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            top: 50%; right: 20px;
+            width: 150px; height: 150px;
+            background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
             transform: translateY(-50%);
             pointer-events: none;
             opacity: 0;
             transition: opacity 0.4s ease;
         }
 
-        .prediction-card:hover::after {
-            opacity: 1;
-        }
-
-        .prediction-card:hover::before {
-            transform: scaleX(1);
-        }
+        .prediction-card:hover::after { opacity: 1; }
+        .prediction-card:hover::before { transform: scaleX(1); }
 
         .prediction-card:hover {
             border-color: var(--accent-blue);
             transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
-            background: linear-gradient(135deg, rgba(15, 29, 47, 0.9) 0%, rgba(10, 22, 40, 0.95) 100%);
+            box-shadow: 0 12px 40px rgba(37,99,235,0.2);
+            background: linear-gradient(135deg, rgba(15,29,47,0.9) 0%, rgba(10,22,40,0.95) 100%);
         }
 
         .prediction-title {
@@ -339,7 +300,7 @@
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
             letter-spacing: -0.01em;
             position: relative;
             z-index: 2;
@@ -389,7 +350,7 @@
             gap: 0.6rem;
             margin-top: 1.5rem;
             padding: 0.6rem 1.25rem;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.1));
+            background: linear-gradient(135deg, rgba(37,99,235,0.15), rgba(59,130,246,0.1));
             border: 1px solid var(--accent-blue);
             border-radius: 4px;
             font-family: 'JetBrains Mono', monospace;
@@ -400,12 +361,11 @@
             font-weight: 600;
             position: relative;
             z-index: 2;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 4px 12px rgba(37,99,235,0.2);
         }
 
         .status-dot {
-            width: 7px;
-            height: 7px;
+            width: 7px; height: 7px;
             background: var(--accent-bright);
             border-radius: 50%;
             animation: pulse 2s ease-in-out infinite;
@@ -427,22 +387,12 @@
             z-index: 2;
         }
 
-        .prediction-link::after {
-            content: '→';
-            transition: transform 0.3s ease;
-        }
+        .prediction-link::after { content: '→'; transition: transform 0.3s ease; }
+        .prediction-link:hover { color: var(--accent-bright); }
+        .prediction-link:hover::after { transform: translateX(4px); }
 
-        .prediction-link:hover {
-            color: var(--accent-bright);
-        }
-
-        .prediction-link:hover::after {
-            transform: translateX(4px);
-        }
-
-        /* Case Studies Preview */
         .case-studies {
-            background: linear-gradient(135deg, rgba(15, 29, 47, 0.4) 0%, rgba(10, 22, 40, 0.6) 100%);
+            background: linear-gradient(135deg, rgba(15,29,47,0.4) 0%, rgba(10,22,40,0.6) 100%);
             backdrop-filter: blur(20px);
             padding: 4rem 0;
             margin: 4rem 0;
@@ -454,58 +404,38 @@
         .case-studies::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
+            top: 0; left: 0;
+            width: 100%; height: 1px;
             background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
         }
 
-        .case-study-list {
-            display: grid;
-            gap: 0;
-        }
+        .case-study-list { display: grid; gap: 0; }
 
-        .case-study-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
+        .case-study-link { text-decoration: none; color: inherit; display: block; }
 
         .case-study-item {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             padding: 2rem 1.5rem;
-            border-bottom: 1px solid rgba(30, 58, 95, 0.5);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid rgba(30,58,95,0.5);
+            transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
             position: relative;
         }
 
         .case-study-item::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 0;
-            width: 3px;
-            height: 100%;
+            left: 0; top: 0;
+            width: 3px; height: 100%;
             background: linear-gradient(180deg, var(--accent-blue), var(--accent-light));
             transform: scaleY(0);
             transition: transform 0.3s ease;
         }
 
-        .case-study-item:last-child {
-            border-bottom: none;
-        }
-
-        .case-study-link:hover .case-study-item {
-            padding-left: 2rem;
-            background: rgba(15, 29, 47, 0.3);
-        }
-
-        .case-study-link:hover .case-study-item::before {
-            transform: scaleY(1);
-        }
+        .case-study-item:last-child { border-bottom: none; }
+        .case-study-link:hover .case-study-item { padding-left: 2rem; background: rgba(15,29,47,0.3); }
+        .case-study-link:hover .case-study-item::before { transform: scaleY(1); }
 
         .case-study-title {
             font-family: 'Crimson Pro', serif;
@@ -513,7 +443,7 @@
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.5rem;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
             letter-spacing: -0.01em;
         }
 
@@ -532,7 +462,6 @@
             white-space: nowrap;
         }
 
-        /* Footer */
         footer {
             padding: 4rem 0 3rem;
             border-top: 1px solid var(--border-color);
@@ -565,161 +494,51 @@
             line-height: 1.8;
         }
 
-        .footer-section a:hover {
-            color: var(--accent-light);
-        }
+        .footer-section a:hover { color: var(--accent-light); }
 
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
+        .footer-links { display: flex; flex-direction: column; gap: 0.75rem; }
 
-        /* Animations */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
-        /* Responsive */
-        /* Mobile Responsive */
         @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-            
-            .container {
-                padding: 0 1.25rem;
-                max-width: 100%;
-            }
-            
-            header {
-                padding: 1.5rem 0;
-            }
-            
-            .site-title {
-                font-size: 1.75rem;
-            }
-            
-            .site-subtitle {
-                font-size: 0.875rem;
-            }
-            
-            nav {
-                flex-direction: column;
-                gap: 0.75rem;
-                align-items: flex-start;
-            }
-            
-            nav a {
-                font-size: 0.875rem;
-                padding: 0.5rem 0;
-            }
-            
-            .hero {
-                padding: 3rem 0;
-            }
-            
-            .hero-statement {
-                font-size: 1.125rem;
-                line-height: 1.6;
-            }
-            
-            .predictions-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-            
-            .prediction-card {
-                padding: 1.25rem;
-            }
-            
-            .prediction-title {
-                font-size: 1.125rem;
-            }
-            
-            .prediction-date {
-                font-size: 0.75rem;
-            }
-            
-            .prediction-label {
-                font-size: 0.75rem;
-            }
-            
-            .prediction-value {
-                font-size: 0.875rem;
-            }
-            
-            .case-study-item {
-                padding: 1.25rem 1rem;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-            
-            .case-study-title {
-                font-size: 1rem;
-            }
-            
-            .case-study-desc {
-                font-size: 0.875rem;
-            }
-            
-            .case-study-year {
-                font-size: 0.75rem;
-                align-self: flex-start;
-            }
-            
-            footer {
-                padding: 2rem 0;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .footer-section h3 {
-                font-size: 1rem;
-            }
-            
-            body, html {
-                overflow-x: hidden;
-                width: 100%;
-            }
-            
-            * {
-                max-width: 100%;
-            }
+            body { font-size: 16px; }
+            .container { padding: 0 1.25rem; max-width: 100%; }
+            header { padding: 1.5rem 0; }
+            .site-title { font-size: 1.75rem; }
+            .site-subtitle { font-size: 0.875rem; }
+            nav { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+            nav a { font-size: 0.875rem; padding: 0.5rem 0; }
+            .hero { padding: 3rem 0; }
+            .hero-statement { font-size: 1.125rem; line-height: 1.6; }
+            .predictions-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+            .prediction-card { padding: 1.25rem; }
+            .prediction-title { font-size: 1.125rem; }
+            .prediction-date { font-size: 0.75rem; }
+            .prediction-label { font-size: 0.75rem; }
+            .prediction-value { font-size: 0.875rem; }
+            .case-study-item { padding: 1.25rem 1rem; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .case-study-title { font-size: 1rem; }
+            .case-study-desc { font-size: 0.875rem; }
+            .case-study-year { font-size: 0.75rem; align-self: flex-start; }
+            footer { padding: 2rem 0; }
+            .footer-content { flex-direction: column; gap: 1.5rem; }
+            .footer-section h3 { font-size: 1rem; }
+            body, html { overflow-x: hidden; width: 100%; }
+            * { max-width: 100%; }
         }
-        
+
         @media (max-width: 480px) {
-            .site-title {
-                font-size: 1.5rem;
-            }
-            
-            .hero-statement {
-                font-size: 1rem;
-            }
-            
-            .prediction-card {
-                padding: 1rem;
-            }
+            .site-title { font-size: 1.5rem; }
+            .hero-statement { font-size: 1rem; }
+            .prediction-card { padding: 1rem; }
         }
     </style>
 </head>
@@ -757,344 +576,248 @@
             <div class="container">
                 <div class="section-header">Active Analysis</div>
                 <h2 class="section-title">Predictions In Progress</h2>
-<p style="
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    letter-spacing: 0.05em;
-    margin-top: -2rem;
-    margin-bottom: 3rem;
-    max-width: 700px;
-    line-height: 1.7;
-    border-left: 2px solid var(--border-color);
-    padding-left: 1rem;
-">Public predictions are limited to companies with no active engagement. All retained work is conducted under NDA and does not appear here.</p>
+                <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 0.05em; margin-top: -2rem; margin-bottom: 3rem; max-width: 700px; line-height: 1.7; border-left: 2px solid var(--border-color); padding-left: 1rem;">Public predictions are limited to companies with no active engagement. All retained work is conducted under NDA and does not appear here.</p>
+
+                <!-- LOWE'S FEATURED CARD -->
                 <div class="prediction-card" style="grid-column: 1 / -1; margin-bottom: 2rem;">
-    <h3 class="prediction-title">Lowe's Narrative Collapse</h3>
-    <div class="prediction-date">February 20, 2026</div>
+                    <h3 class="prediction-title">Lowe's Narrative Collapse</h3>
+                    <div class="prediction-date">February 20, 2026</div>
 
-    <div class="prediction-detail">
-        <span class="prediction-label">Decision:</span>
-        <span class="prediction-value">Revenue down $13.4B from peak. Buybacks exceeded free cash flow by $12.2B over two years while net debt doubled. The "Total Home Strategy" appeared in every earnings call across 15 quarters, 11 of which reported negative comparable sales. The language did not change. Only the year did. Analyst questions on recovery timing, DIY decline, and margin structure were consistently met with macro redirection and substitute metrics rather than direct answers. Domestic layoffs were framed publicly as labor reinvestment while the Bengaluru Global Capability Center grew from approximately 1,000 to 4,700 employees over the same period. The reallocation narrative and the offshore growth curve are not reconcilable.</span>
-    </div>
+                    <div class="prediction-detail">
+                        <span class="prediction-label">Decision:</span>
+                        <span class="prediction-value">Revenue down $13.4B from peak. Buybacks exceeded free cash flow by $12.2B over two years while net debt doubled. The "Total Home Strategy" appeared in every earnings call across 15 quarters, 11 of which reported negative comparable sales. The language did not change. Only the year did. Analyst questions on recovery timing, DIY decline, and margin structure were consistently met with macro redirection and substitute metrics rather than direct answers. Domestic layoffs were framed publicly as labor reinvestment while the Bengaluru Global Capability Center grew from approximately 1,000 to 4,700 employees over the same period. The reallocation narrative and the offshore growth curve are not reconcilable.</span>
+                    </div>
 
-    <div class="prediction-detail">
-        <span class="prediction-label">Prediction:</span>
-        <span class="prediction-value">Acquisitions of FBM and ADG will not resolve the structural gap between what Lowe's claims operationally and what the market can defend. Comp sales remain negative through FY2026. Narrative pressure compounds at Q2 earnings.</span>
-    </div>
+                    <div class="prediction-detail">
+                        <span class="prediction-label">Prediction:</span>
+                        <span class="prediction-value">Acquisitions of FBM and ADG will not resolve the structural gap between what Lowe's claims operationally and what the market can defend. Comp sales remain negative through FY2026. Narrative pressure compounds at Q2 earnings.</span>
+                    </div>
 
-    <div class="prediction-detail">
-        <span class="prediction-label">Falsifiable:</span>
-        <span class="prediction-value">Q1 FY2026 (May 2026), Q2 FY2026 (August 2026), Full Year FY2026 (February 2027)</span>
-    </div>
+                    <div class="prediction-detail">
+                        <span class="prediction-label">Falsifiable:</span>
+                        <span class="prediction-value">Q1 FY2026 (May 2026), Q2 FY2026 (August 2026), Full Year FY2026 (February 2027)</span>
+                    </div>
 
-    <div class="prediction-detail">
-        <span class="prediction-label">Filed:</span>
-        <span class="prediction-value">Pre-earnings. Q4 FY2025 call confirmed all five flagged metrics, February 25, 2026.</span>
-    </div>
+                    <div class="prediction-detail">
+                        <span class="prediction-label">Filed:</span>
+                        <span class="prediction-value">Pre-earnings. Q4 FY2025 call confirmed all five flagged metrics, February 25, 2026.</span>
+                    </div>
 
-    <div class="prediction-status">
-        <span class="status-dot"></span>
-        Breach Confirmed — Monitoring
-    </div>
+                    <div class="prediction-status">
+                        <span class="status-dot"></span>
+                        Breach Confirmed — Monitoring
+                    </div>
 
-    <a href="#" class="prediction-link" style="pointer-events: none; opacity: 0.45; cursor: default;">Analysis Coming Soon</a>
-</div>
+                    <a href="https://open.substack.com/pub/ermiasbraki/p/how-lowes-board-story-and-market?utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link" target="_blank">Read Full Analysis</a>
+                </div>
 
                 <div class="predictions-grid">
                     <div class="prediction-card">
                         <h3 class="prediction-title">GoDaddy Customer Decline</h3>
                         <div class="prediction-date">February 15, 2026</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
                             <span class="prediction-value">Campaign featuring incompetence while stock down 58%, customer count declining 2.4% YoY.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
                             <span class="prediction-value">No return to positive customer growth in 2026. If still declining Q4 2026, acquisition conversations or strategic review by end of 2027.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
                             <span class="prediction-value">Q1 2026 (May), Q2 2026 (August), Q4 2026 (February 2027)</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_some-companies-dont-lose-customers-because-activity-7428497713337446400-eFS7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
                     </div>
 
-                   <div class="prediction-card">
-    <h3 class="prediction-title">Workday CEO Fourth Return</h3>
-    <div class="prediction-date">February 11, 2026</div>
-    
-    <div class="prediction-detail">
-        <span class="prediction-label">Decision:</span>
-        <span class="prediction-value">Aneel Bhusri returning as CEO for fourth time</span>
-    </div>
-    
-    <div class="prediction-detail">
-        <span class="prediction-label">Prediction:</span>
-        <span class="prediction-value">Bhusri steps back again within 24 months. Board still solving wrong problem.</span>
-    </div>
-    
-    <div class="prediction-detail">
-        <span class="prediction-label">Falsifiable:</span>
-        <span class="prediction-value">By February 2028</span>
-    </div>
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">Workday CEO Fourth Return</h3>
+                        <div class="prediction-date">February 11, 2026</div>
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Decision:</span>
+                            <span class="prediction-value">Aneel Bhusri returning as CEO for fourth time</span>
+                        </div>
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Prediction:</span>
+                            <span class="prediction-value">Bhusri steps back again within 24 months. Board still solving wrong problem.</span>
+                        </div>
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Falsifiable:</span>
+                            <span class="prediction-value">By February 2028</span>
+                        </div>
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
+                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_aneel-bhusri-just-became-workdays-ceo-for-activity-7427327344379494400-NCex?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
+                    </div>
 
-    <div class="prediction-status">
-        <span class="status-dot"></span>
-        In Progress
-    </div>
-    
-    <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_aneel-bhusri-just-became-workdays-ceo-for-activity-7427327344379494400-NCex?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME">Read Analysis</a>
-</div>
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">Salesforce Executive Exodus</h3>
+                        <div class="prediction-date">February 12, 2026</div>
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Crisis:</span>
+                            <span class="prediction-value">5 executives left in 2 months. 1,400 employees signed letter. Stock down 27%.</span>
+                        </div>
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Prediction:</span>
+                            <span class="prediction-value">Benioff hedges. Feb 25: vague statements. Q1 2027: more departures, another committee.</span>
+                        </div>
+                        <div class="prediction-detail">
+                            <span class="prediction-label">Falsifiable:</span>
+                            <span class="prediction-value">Feb 25, 2026 &amp; Q1 2027</span>
+                        </div>
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
+                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_time-to-play-ceo-for-a-day-imagine-youre-activity-7427686695409733632-aqZu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
+                    </div>
 
-<div class="prediction-card">
-    <h3 class="prediction-title">Salesforce Executive Exodus</h3>
-    <div class="prediction-date">February 12, 2026</div>
-    
-    <div class="prediction-detail">
-        <span class="prediction-label">Crisis:</span>
-        <span class="prediction-value">5 executives left in 2 months. 1,400 employees signed letter. Stock down 27%.</span>
-    </div>
-    
-    <div class="prediction-detail">
-        <span class="prediction-label">Prediction:</span>
-        <span class="prediction-value">Benioff hedges. Feb 25: vague statements. Q1 2027: more departures, another committee.</span>
-    </div>
-    
-    <div class="prediction-detail">
-        <span class="prediction-label">Falsifiable:</span>
-        <span class="prediction-value">Feb 25, 2026 & Q1 2027</span>
-    </div>
-
-    <div class="prediction-status">
-        <span class="status-dot"></span>
-        In Progress
-    </div>
-    
-    <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_time-to-play-ceo-for-a-day-imagine-youre-activity-7427686695409733632-aqZu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
-</div>
                     <div class="prediction-card">
                         <h3 class="prediction-title">Super Bowl 2026 Narrative Risk Report Card</h3>
                         <div class="prediction-date">February 9, 2026</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Analysis:</span>
                             <span class="prediction-value">Tracked 9 Super Bowl LX advertisers using Board Approval vs Market Defense scoring. Gap 0 (aligned): 3 brands. Gap 2-3 (severe risk): 6 brands.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Featured:</span>
                             <span class="prediction-value">GLP-1 Drug War (Novo vs Hims vs Ro), Meta/Oakley vs Ring privacy contrast, Vital Farms' $500k hedge that got 1 global mention</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Predictions:</span>
                             <span class="prediction-value">Q4 2026 metrics and Feb 2027 outcomes for all 9 brands. Check back to validate.</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://medium.com/@ermiasbraki/super-bowl-2026-narrative-risk-report-card-board-approval-vs-market-defense-fa06d37cc3a3" class="prediction-link">Read Full Analysis</a>
                     </div>
 
                     <div class="prediction-card">
                         <h3 class="prediction-title">Vital Farms Premium Positioning</h3>
                         <div class="prediction-date">February 4, 2026</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
                             <span class="prediction-value">5 AM Super Bowl ad during scrutiny over premium justification ($7 to $8 vs $3 to $4 conventional)</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
                             <span class="prediction-value">Q4 2026: Pricing power erodes OR explicit repositioning to ethics vs nutrition</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
                             <span class="prediction-value">Q4 2026 earnings call</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://medium.com/@ermiasbraki/vital-farms-board-approval-vs-market-defense-0e2d7fc240f1" class="prediction-link">Read Full Analysis</a>
                     </div>
 
                     <div class="prediction-card">
                         <h3 class="prediction-title">Pandora Commodity Strategy</h3>
                         <div class="prediction-date">February 5, 2026</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
                             <span class="prediction-value">New CEO swaps silver for platinum to escape commodity volatility</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
                             <span class="prediction-value">Q4 2026: Margins stay compressed OR consumer resistance to platinum-plated OR demand decline continues</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
                             <span class="prediction-value">Q4 2026 earnings (February 2027)</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://medium.com/@ermiasbraki/pandora-when-platinum-cant-save-what-silver-built-838c618e7d8f" class="prediction-link">Read Full Analysis</a>
                     </div>
 
                     <div class="prediction-card">
                         <h3 class="prediction-title">Target CEO Transition</h3>
                         <div class="prediction-date">February 1, 2026</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
                             <span class="prediction-value">23 year insider promoted over external disruption</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
                             <span class="prediction-value">Operational improvements without strategic repositioning. Sales remain flat through 2026.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
                             <span class="prediction-value">Q4 2026 earnings</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://medium.com/@ermiasbraki/targets-ceo-transition-when-continuity-becomes-the-risk-8f7d0f686b06" class="prediction-link">Read Full Analysis</a>
                     </div>
 
                     <div class="prediction-card">
                         <h3 class="prediction-title">PayPal CEO Appointment</h3>
                         <div class="prediction-date">February 4, 2026</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
                             <span class="prediction-value">Cost-cutter replaces growth CEO after 2.5 years</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
                             <span class="prediction-value">Margins improve but revenue continues declining. Product problem disguised as execution issue.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
                             <span class="prediction-value">Q3 2027</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6?utm_source=share&utm_medium=member_desktop" class="prediction-link">Read Analysis</a>
                     </div>
 
                     <div class="prediction-card">
                         <h3 class="prediction-title">Disney CEO Appointment</h3>
                         <div class="prediction-date">February 4, 2026</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
                             <span class="prediction-value">Parks chief promoted over content leader</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
                             <span class="prediction-value">Parks continue performing on legacy IP. Content pipeline stays broken. Future attractions lack foundation.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
                             <span class="prediction-value">2028</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6?utm_source=share&utm_medium=member_desktop" class="prediction-link">Read Analysis</a>
                     </div>
 
                     <div class="prediction-card">
                         <h3 class="prediction-title">Jaguar Rebrand</h3>
                         <div class="prediction-date">November 2024 - 2029</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
                             <span class="prediction-value">Destroyed 102 years of heritage. Stopped all production. Ultra-luxury repositioning without brand equity.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">First-year sales <5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</span>
+                            <span class="prediction-value">First-year sales &lt;5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
                             <span class="prediction-value">2026 sales, 2027 review, 2029 survival</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://medium.com/@ermiasbraki/jaguar-will-fail-by-2029-when-leaders-optimize-for-approval-over-defense-e87c3d4ed5f9" class="prediction-link">Read Full Analysis</a>
                     </div>
 
                     <div class="prediction-card">
                         <h3 class="prediction-title">UPS Amazon Exit</h3>
                         <div class="prediction-date">February 2, 2026</div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
                             <span class="prediction-value">Cut 78k jobs, ended Amazon partnership (1B+ packages/year), $6.5B cost cuts</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
                             <span class="prediction-value">Lost $2.2B contribution to fixed costs. Network utilization problems. Can't replace Amazon volume. Margins flat/down by Q4 2026.</span>
                         </div>
-                        
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
                             <span class="prediction-value">Q4 2026 earnings (Feb 2027)</span>
                         </div>
-
-                        <div class="prediction-status">
-                            <span class="status-dot"></span>
-                            In Progress
-                        </div>
-                        
+                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://medium.com/@ermiasbraki/ups-cuts-30-000-jobs-to-end-amazon-partnership-bold-leadership-or-cost-cutting-disguised-as-4ce026c5df31" class="prediction-link">Read Full Analysis</a>
                     </div>
                 </div>
@@ -1181,6 +904,7 @@
                 <div class="footer-section">
                     <h3>Analysis</h3>
                     <div class="footer-links">
+                        <a href="https://ermiasbraki.substack.com/" target="_blank">Substack</a>
                         <a href="https://medium.com/@ermiasbraki" target="_blank">Medium</a>
                         <a href="https://www.linkedin.com/in/ermias-braki-115a62336" target="_blank">LinkedIn</a>
                     </div>
@@ -1189,4 +913,10 @@
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <p>For narrative risk assessment inquiries:</p>
-                    <a href="/cdn-cgi/l/email-protection#8eebfce3e7effdceebfce3e7effdecfcefe5e7a0ede1e3"><span class="__cf_email__" data-cfemail="2e4b5c43474f5d6e4b5c43474f5d
+                    <a href="mailto:ermias@ermiasbraki.com">ermias@ermiasbraki.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
