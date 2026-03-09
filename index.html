@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ermias Braki | Narrative Risk Analysis</title>
     
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Independent narrative risk analyst identifying gaps between board approval and market defense. Falsifiable predictions on strategic decisions for Fortune 500 companies and high-growth startups.">
     <meta name="keywords" content="narrative risk, strategic analysis, board approval, market defense, business consulting, strategic consulting, executive advisory">
     <meta name="author" content="Ermias Braki">
     <link rel="canonical" href="https://ermiasbraki.com">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ermiasbraki.com">
     <meta property="og:title" content="Ermias Braki | Narrative Risk Analysis">
     <meta property="og:description" content="Independent narrative risk analyst identifying gaps between board approval and market defense. Falsifiable predictions on strategic decisions.">
     <meta property="og:site_name" content="Ermias Braki">
     
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Ermiasbraki">
     <meta name="twitter:creator" content="@Ermiasbraki">
     <meta name="twitter:title" content="Ermias Braki | Narrative Risk Analysis">
     <meta name="twitter:description" content="Independent narrative risk analyst identifying gaps between board approval and market defense. Falsifiable predictions on strategic decisions.">
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK15RZHNRR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -44,6 +40,8 @@
             --accent-blue: #2563eb;
             --accent-light: #3b82f6;
             --accent-bright: #60a5fa;
+            --accent-green: #22c55e;
+            --accent-green-dim: #16a34a;
             --text-primary: #e8eaed;
             --text-secondary: #9ca3af;
             --border-color: #1e3a5f;
@@ -199,12 +197,6 @@
 
         .value-prop p:last-child {
             margin-bottom: 0;
-            font-weight: 600;
-            font-size: 1.25rem;
-            background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .section {
@@ -231,6 +223,14 @@
             bottom: -1px; left: 0;
             width: 60px; height: 2px;
             background: linear-gradient(90deg, var(--accent-blue), transparent);
+        }
+
+        .section-header.confirmed {
+            color: var(--accent-green);
+        }
+
+        .section-header.confirmed::after {
+            background: linear-gradient(90deg, var(--accent-green), transparent);
         }
 
         .section-title {
@@ -272,6 +272,14 @@
             transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
         }
 
+        .prediction-card.confirmed-card {
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        .prediction-card.confirmed-card::before {
+            background: linear-gradient(90deg, var(--accent-green-dim), var(--accent-green));
+        }
+
         .prediction-card::after {
             content: '';
             position: absolute;
@@ -292,6 +300,11 @@
             transform: translateY(-6px);
             box-shadow: 0 12px 40px rgba(37,99,235,0.2);
             background: linear-gradient(135deg, rgba(15,29,47,0.9) 0%, rgba(10,22,40,0.95) 100%);
+        }
+
+        .prediction-card.confirmed-card:hover {
+            border-color: var(--accent-green);
+            box-shadow: 0 12px 40px rgba(34,197,94,0.15);
         }
 
         .prediction-title {
@@ -337,6 +350,8 @@
             font-weight: 600;
         }
 
+        .prediction-label.green { color: var(--accent-green); }
+
         .prediction-value {
             font-size: 0.9375rem;
             color: var(--text-primary);
@@ -364,12 +379,24 @@
             box-shadow: 0 4px 12px rgba(37,99,235,0.2);
         }
 
+        .prediction-status.confirmed {
+            background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(22,163,74,0.1));
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+            box-shadow: 0 4px 12px rgba(34,197,94,0.2);
+        }
+
         .status-dot {
             width: 7px; height: 7px;
             background: var(--accent-bright);
             border-radius: 50%;
             animation: pulse 2s ease-in-out infinite;
             box-shadow: 0 0 8px var(--accent-light);
+        }
+
+        .status-dot.green {
+            background: var(--accent-green);
+            box-shadow: 0 0 8px var(--accent-green);
         }
 
         .prediction-link {
@@ -387,9 +414,51 @@
             z-index: 2;
         }
 
-        .prediction-link::after { content: '→'; transition: transform 0.3s ease; }
+        .prediction-link::after { content: ''; transition: transform 0.3s ease; }
         .prediction-link:hover { color: var(--accent-bright); }
         .prediction-link:hover::after { transform: translateX(4px); }
+
+        .predistribution-note {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.05em;
+            margin-top: -2rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            line-height: 1.7;
+            border-left: 2px solid var(--border-color);
+            padding-left: 1rem;
+        }
+
+        .predistribution-record {
+            background: linear-gradient(135deg, rgba(15,29,47,0.8) 0%, rgba(10,22,40,0.9) 100%);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-green);
+            border-radius: 4px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+            max-width: 900px;
+        }
+
+        .predistribution-record h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+        }
+
+        .predistribution-record p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .predistribution-record strong {
+            color: var(--text-primary);
+        }
 
         .case-studies {
             background: linear-gradient(135deg, rgba(15,29,47,0.4) 0%, rgba(10,22,40,0.6) 100%);
@@ -410,7 +479,6 @@
         }
 
         .case-study-list { display: grid; gap: 0; }
-
         .case-study-link { text-decoration: none; color: inherit; display: block; }
 
         .case-study-item {
@@ -495,7 +563,6 @@
         }
 
         .footer-section a:hover { color: var(--accent-light); }
-
         .footer-links { display: flex; flex-direction: column; gap: 0.75rem; }
 
         @keyframes fadeIn {
@@ -548,6 +615,7 @@
             <h1 class="site-title"><a href="index.html">Ermias Braki</a></h1>
             <p class="site-subtitle">Independent Narrative Risk Analyst</p>
             <nav>
+                <a href="#confirmed">Confirmed</a>
                 <a href="#predictions">Predictions</a>
                 <a href="#cases">Case Studies</a>
                 <a href="track-record.html">Track Record</a>
@@ -567,16 +635,65 @@
                     <p>I identify the gap between what boards approve and what markets defend.</p>
                     <p>Leaders optimize for stakeholder consensus. They don't always assess whether customers will defend those decisions under pressure.</p>
                     <p>I find these contradictions before they become crises.</p>
-                    <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">I track 35 proprietary hybrid metrics that predict positioning failures 6-12 months before they appear in standard analyst reports. These combine narrative signals (message drift, evasion patterns, expensive signaling) with financial data (efficiency ratios, margin trajectories, cash conversion) to detect when companies lose the ability to defend why they deserve premium pricing. When a public company increases marketing spend while customers decline for three consecutive quarters, the efficiency ratio becomes infinite, but boards see revenue growth while markets price in structural erosion. That gap is the early warning.</p>
+                    <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">I track 35 proprietary hybrid metrics that predict positioning failures 6 to 12 months before they appear in standard analyst reports. These combine narrative signals (message drift, evasion patterns, expensive signaling) with financial data (efficiency ratios, margin trajectories, cash conversion) to detect when companies lose the ability to defend why they deserve premium pricing. When a public company increases marketing spend while customers decline for three consecutive quarters, the efficiency ratio becomes infinite, but boards see revenue growth while markets price in structural erosion. That gap is the early warning.</p>
+                    <p style="margin-top: 1.5rem; font-size: 1rem; color: var(--text-secondary);">All public predictions are filed before the events they describe. Documentation on request.</p>
                 </div>
             </div>
         </section>
 
+        <!-- CONFIRMED PREDICTIONS -->
+        <section class="section" id="confirmed">
+            <div class="container">
+                <div class="predistribution-record">
+                    <h4>Pre-Distribution Record</h4>
+                    <p>Predictions on this page were documented and distributed before the events they describe. Distribution record includes <strong>physical filings to named executives</strong>, board-level email correspondence, timestamped LinkedIn posts, and Substack publications. All available on request. The purpose is not to claim credit retroactively. The purpose is to show the framework works before it's convenient to say so.</p>
+                </div>
+
+                <div class="section-header confirmed">Confirmed</div>
+                <h2 class="section-title">2026 Confirmed Predictions (Non-Client)</h2>
+
+                <div class="predictions-grid">
+                    <div class="prediction-card confirmed-card" style="grid-column: 1 / -1;">
+                        <h3 class="prediction-title">Novo Nordisk / Hims Partnership</h3>
+                        <div class="prediction-date" style="color: var(--accent-green);">Filed: February 9, 2026 | Confirmed: March 9, 2026</div>
+
+                        <div class="prediction-detail">
+                            <span class="prediction-label green">Filed:</span>
+                            <span class="prediction-value">Super Bowl 2026 Narrative Risk Report Card, published February 9, 2026. Prediction stated: "Feb 2027 Prediction: Major pricing restructure announced OR partnership with telehealth platform. Can't beat them, join them." Timestamped on LinkedIn and Substack before the announcement.</span>
+                        </div>
+
+                        <div class="prediction-detail">
+                            <span class="prediction-label green">What Happened:</span>
+                            <span class="prediction-value">Reuters reported March 6, 2026 that Novo Nordisk and Hims planned to announce a new partnership as soon as Monday March 9. The announcement came one year ahead of the predicted timeline. The pressure was worse than estimated. The direction was exact.</span>
+                        </div>
+
+                        <div class="prediction-detail">
+                            <span class="prediction-label green">Timeline:</span>
+                            <span class="prediction-value">April 2025: initial partnership. June 2025: Novo terminated. November 2025: talks resumed. February 2026: Hims launched $49 copycat. Novo sued. Hims pulled product. March 2026: partnership announced. The conflict compressed a predicted 2027 outcome into 2026.</span>
+                        </div>
+
+                        <div class="prediction-detail">
+                            <span class="prediction-label green">Note:</span>
+                            <span class="prediction-value">Prediction was documented publicly before the Reuters report. LinkedIn post and Substack publication serve as timestamped pre-distribution record. This was not a reaction to the news.</span>
+                        </div>
+
+                        <div class="prediction-status confirmed">
+                            <span class="status-dot green"></span>
+                            Confirmed One Year Early
+                        </div>
+
+                        <a href="https://medium.com/@ermiasbraki/super-bowl-2026-narrative-risk-report-card-board-approval-vs-market-defense-fa06d37cc3a3" class="prediction-link" target="_blank">Read Original Analysis</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACTIVE PREDICTIONS -->
         <section class="section" id="predictions">
             <div class="container">
                 <div class="section-header">Active Analysis</div>
                 <h2 class="section-title">Predictions In Progress</h2>
-                <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 0.05em; margin-top: -2rem; margin-bottom: 3rem; max-width: 700px; line-height: 1.7; border-left: 2px solid var(--border-color); padding-left: 1rem;">Public predictions are limited to companies with no active engagement. All retained work is conducted under NDA and does not appear here.</p>
+                <p class="predistribution-note">Public predictions are limited to companies with no active engagement. All retained work is conducted under NDA and does not appear here.</p>
 
                 <!-- LOWE'S FEATURED CARD -->
                 <div class="prediction-card" style="grid-column: 1 / -1; margin-bottom: 2rem;">
@@ -594,6 +711,11 @@
                     </div>
 
                     <div class="prediction-detail">
+                        <span class="prediction-label">Field Validation:</span>
+                        <span class="prediction-value">Store-level employees are publicly confirming the workforce narrative gap in real time. Department supervisors at high-performing stores report payroll cuts inconsistent with store performance metrics. The pattern described in the analysis is being independently validated from inside the organization, without coordination. This is documented in public forums and timestamped after the original filing.</span>
+                    </div>
+
+                    <div class="prediction-detail">
                         <span class="prediction-label">Falsifiable:</span>
                         <span class="prediction-value">Q1 FY2026 (May 2026), Q2 FY2026 (August 2026), Full Year FY2026 (February 2027)</span>
                     </div>
@@ -605,7 +727,7 @@
 
                     <div class="prediction-status">
                         <span class="status-dot"></span>
-                        Breach Confirmed — Monitoring
+                        Breach Confirmed, Monitoring
                     </div>
 
                     <a href="https://open.substack.com/pub/ermiasbraki/p/how-lowes-board-story-and-market?utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link" target="_blank">Read Full Analysis</a>
@@ -617,7 +739,7 @@
                         <div class="prediction-date">February 15, 2026</div>
                         <div class="prediction-detail">
                             <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Campaign featuring incompetence while stock down 58%, customer count declining 2.4% YoY.</span>
+                            <span class="prediction-value">Multi-year campaign anchoring brand in customer incompetence while stock down 58%, customer count declining 2.4% YoY. CEO and CFO both sold significant shares on the same day.</span>
                         </div>
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
@@ -628,7 +750,7 @@
                             <span class="prediction-value">Q1 2026 (May), Q2 2026 (August), Q4 2026 (February 2027)</span>
                         </div>
                         <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_some-companies-dont-lose-customers-because-activity-7428497713337446400-eFS7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
+                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_some-companies-dont-lose-customers-because-activity-7428497713337446400-eFS7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2IPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
                     </div>
 
                     <div class="prediction-card">
@@ -666,7 +788,7 @@
                             <span class="prediction-value">Feb 25, 2026 &amp; Q1 2027</span>
                         </div>
                         <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_time-to-play-ceo-for-a-day-imagine-youre-activity-7427686695409733632-aqZu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
+                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_time-to-play-ceo-for-a-day-imagine-youre-activity-7427686695409733632-aqZu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2IPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
                     </div>
 
                     <div class="prediction-card">
@@ -682,7 +804,7 @@
                         </div>
                         <div class="prediction-detail">
                             <span class="prediction-label">Predictions:</span>
-                            <span class="prediction-value">Q4 2026 metrics and Feb 2027 outcomes for all 9 brands. Check back to validate.</span>
+                            <span class="prediction-value">Q4 2026 metrics and Feb 2027 outcomes for all 9 brands. Check back to validate. One prediction (Novo/Hims) confirmed March 2026, one year early.</span>
                         </div>
                         <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
                         <a href="https://medium.com/@ermiasbraki/super-bowl-2026-narrative-risk-report-card-board-approval-vs-market-defense-fa06d37cc3a3" class="prediction-link">Read Full Analysis</a>
@@ -792,7 +914,7 @@
                         </div>
                         <div class="prediction-detail">
                             <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">First-year sales &lt;5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</span>
+                            <span class="prediction-value">First-year sales under 5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</span>
                         </div>
                         <div class="prediction-detail">
                             <span class="prediction-label">Falsifiable:</span>
@@ -891,7 +1013,8 @@
                 <div class="value-prop" style="max-width: 900px;">
                     <p>Every organization tells a story. They only face backlash when that story can't be defended.</p>
                     <p>Proximity to problems blinds leadership. They optimize for stakeholder approval instead of asking whether customers will believe what they're promising.</p>
-                    <p style="color: var(--accent-light); font-size: 1.125rem;">I identify these gaps before they surface as crises, when adjustment is still possible without reputational or operational fallout.</p>
+                    <p>I identify these gaps before they surface as crises, when adjustment is still possible without reputational or operational fallout. The companies on this page are not here because I want them to fail. They're here because the gap between what they're saying and what they're doing is documented, falsifiable, and worth naming before the market names it for them.</p>
+                    <p style="color: var(--accent-light); font-size: 1.125rem;">Transparency is not a liability. For most of the companies on this page, it's the only thing that stops a slow erosion from becoming an irreversible one.</p>
                     <p style="font-size: 1rem; margin-top: 2rem; color: var(--text-secondary);">Available nationwide for narrative risk assessment.</p>
                 </div>
             </div>
