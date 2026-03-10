@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track Record | Ermias Braki</title>
     
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Falsifiable predictions with timestamps. Public record of narrative risk analysis across Target, PayPal, Disney, Jaguar, UPS, Vital Farms, and more. Predictions resolve Q4 2026 to 2029.">
     <meta name="keywords" content="business predictions, falsifiable predictions, strategic analysis, track record, narrative risk, board decisions">
     <meta name="author" content="Ermias Braki">
     <link rel="canonical" href="https://ermiasbraki.com/track-record.html">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ermiasbraki.com/track-record.html">
     <meta property="og:title" content="Track Record | Ermias Braki">
     <meta property="og:description" content="Falsifiable predictions with timestamps. Public record of narrative risk analysis across Target, PayPal, Disney, Jaguar, UPS, Vital Farms, and more.">
     <meta property="og:site_name" content="Ermias Braki">
     
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Ermiasbraki">
     <meta name="twitter:creator" content="@Ermiasbraki">
     <meta name="twitter:title" content="Track Record | Ermias Braki">
     <meta name="twitter:description" content="Falsifiable predictions with timestamps. Public record of narrative risk analysis across major companies.">
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK15RZHNRR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -45,6 +41,7 @@
             --accent-light: #3b82f6;
             --accent-bright: #60a5fa;
             --accent-green: #10b981;
+            --accent-green-solid: #22c55e;
             --accent-yellow: #f59e0b;
             --text-primary: #e8eaed;
             --text-secondary: #9ca3af;
@@ -52,11 +49,7 @@
             --card-bg: #0f1d2f;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Work Sans', sans-serif;
@@ -70,10 +63,7 @@
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background-image: 
                 radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
@@ -84,10 +74,7 @@
         body::after {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             opacity: 0.3;
             pointer-events: none;
@@ -102,7 +89,6 @@
             z-index: 1;
         }
 
-        /* Header */
         header {
             padding: 3rem 0 2rem;
             border-bottom: 1px solid var(--border-color);
@@ -118,10 +104,7 @@
             color: var(--text-primary);
         }
 
-        .site-title a {
-            color: var(--text-primary);
-            text-decoration: none;
-        }
+        .site-title a { color: var(--text-primary); text-decoration: none; }
 
         .site-subtitle {
             font-family: 'JetBrains Mono', monospace;
@@ -131,11 +114,7 @@
             letter-spacing: 0.1em;
         }
 
-        nav {
-            margin-top: 2rem;
-            display: flex;
-            gap: 2rem;
-        }
+        nav { margin-top: 2rem; display: flex; gap: 2rem; }
 
         nav a {
             font-family: 'JetBrains Mono', monospace;
@@ -148,26 +127,19 @@
             position: relative;
         }
 
-        nav a:hover, nav a.active {
-            color: var(--accent-light);
-        }
+        nav a:hover, nav a.active { color: var(--accent-light); }
 
         nav a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
             background: var(--accent-blue);
             transition: width 0.3s ease;
         }
 
-        nav a:hover::after, nav a.active::after {
-            width: 100%;
-        }
+        nav a:hover::after, nav a.active::after { width: 100%; }
 
-        /* Main Content */
         .page-header {
             padding: 6rem 0 4rem;
             animation: fadeIn 1s ease-out 0.2s both;
@@ -179,7 +151,7 @@
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--text-primary);
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
             letter-spacing: -0.02em;
         }
 
@@ -190,15 +162,36 @@
             line-height: 1.8;
         }
 
-        /* Timeline */
-        .timeline {
-            padding: 4rem 0;
-            animation: fadeIn 1s ease-out 0.4s both;
+        .predistribution-record {
+            background: linear-gradient(135deg, rgba(15,29,47,0.8) 0%, rgba(10,22,40,0.9) 100%);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-green-solid);
+            border-radius: 4px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 4rem;
+            max-width: 900px;
         }
 
-        .year-section {
-            margin-bottom: 5rem;
+        .predistribution-record h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-green-solid);
+            margin-bottom: 1rem;
         }
+
+        .predistribution-record p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .predistribution-record strong { color: var(--text-primary); }
+
+        .timeline { padding: 2rem 0 4rem; animation: fadeIn 1s ease-out 0.4s both; }
+
+        .year-section { margin-bottom: 5rem; }
 
         .year-header {
             font-family: 'JetBrains Mono', monospace;
@@ -214,11 +207,15 @@
         .year-header::after {
             content: '';
             position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 120px;
-            height: 2px;
+            bottom: -2px; left: 0;
+            width: 120px; height: 2px;
             background: linear-gradient(90deg, var(--accent-blue), transparent);
+        }
+
+        .year-header.confirmed-year { color: var(--accent-green-solid); }
+
+        .year-header.confirmed-year::after {
+            background: linear-gradient(90deg, var(--accent-green-solid), transparent);
         }
 
         .prediction-timeline-item {
@@ -228,16 +225,12 @@
             border-left: 2px solid var(--border-color);
         }
 
-        .prediction-timeline-item:last-child {
-            border-left: 2px solid transparent;
-        }
+        .prediction-timeline-item:last-child { border-left: 2px solid transparent; }
 
         .timeline-dot {
             position: absolute;
-            left: -9px;
-            top: 8px;
-            width: 16px;
-            height: 16px;
+            left: -9px; top: 8px;
+            width: 16px; height: 16px;
             border-radius: 50%;
             border: 3px solid var(--accent-blue);
             background: var(--primary-dark);
@@ -255,13 +248,19 @@
             border-color: var(--accent-green);
         }
 
+        .timeline-dot.confirmed {
+            background: var(--accent-green-solid);
+            border-color: var(--accent-green-solid);
+            box-shadow: 0 0 0 4px var(--primary-dark), 0 0 16px var(--accent-green-solid);
+        }
+
         .timeline-dot.monitoring {
             background: var(--accent-yellow);
             border-color: var(--accent-yellow);
         }
 
         .timeline-content {
-            background: linear-gradient(135deg, rgba(15, 29, 47, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(15,29,47,0.6) 0%, rgba(10,22,40,0.8) 100%);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -269,10 +268,19 @@
             transition: all 0.3s ease;
         }
 
+        .timeline-content.confirmed-content {
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
         .timeline-content:hover {
             border-color: var(--accent-blue);
             transform: translateX(8px);
-            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+            box-shadow: 0 8px 32px rgba(37,99,235,0.15);
+        }
+
+        .timeline-content.confirmed-content:hover {
+            border-color: var(--accent-green-solid);
+            box-shadow: 0 8px 32px rgba(34,197,94,0.15);
         }
 
         .timeline-date {
@@ -285,29 +293,20 @@
             font-weight: 600;
         }
 
+        .timeline-date.confirmed-date { color: var(--accent-green-solid); }
+
         .timeline-title {
             font-family: 'Crimson Pro', serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 1rem;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
-        .timeline-prediction {
-            font-size: 0.9375rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-prediction p {
-            margin-bottom: 1rem;
-        }
-
-        .timeline-prediction p:last-child {
-            margin-bottom: 0;
-        }
+        .timeline-prediction { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+        .timeline-prediction p { margin-bottom: 1rem; }
+        .timeline-prediction p:last-child { margin-bottom: 0; }
 
         .timeline-prediction strong {
             font-family: 'JetBrains Mono', monospace;
@@ -317,6 +316,8 @@
             letter-spacing: 0.08em;
             font-weight: 600;
         }
+
+        .timeline-prediction strong.green { color: var(--accent-green-solid); }
 
         .timeline-status {
             display: inline-flex;
@@ -333,19 +334,25 @@
         }
 
         .timeline-status.in-progress {
-            background: rgba(37, 99, 235, 0.15);
+            background: rgba(37,99,235,0.15);
             border: 1px solid var(--accent-blue);
             color: var(--accent-bright);
         }
 
         .timeline-status.resolved {
-            background: rgba(16, 185, 129, 0.15);
+            background: rgba(16,185,129,0.15);
             border: 1px solid var(--accent-green);
             color: var(--accent-green);
         }
 
+        .timeline-status.confirmed-status {
+            background: rgba(34,197,94,0.15);
+            border: 1px solid var(--accent-green-solid);
+            color: var(--accent-green-solid);
+        }
+
         .timeline-status.monitoring {
-            background: rgba(245, 158, 11, 0.15);
+            background: rgba(245,158,11,0.15);
             border: 1px solid var(--accent-yellow);
             color: var(--accent-yellow);
         }
@@ -363,20 +370,10 @@
             font-weight: 500;
         }
 
-        .timeline-link::after {
-            content: '→';
-            transition: transform 0.3s ease;
-        }
+        .timeline-link::after { content: ''; transition: transform 0.3s ease; }
+        .timeline-link:hover { color: var(--accent-bright); }
+        .timeline-link:hover::after { transform: translateX(4px); }
 
-        .timeline-link:hover {
-            color: var(--accent-bright);
-        }
-
-        .timeline-link:hover::after {
-            transform: translateX(4px);
-        }
-
-        /* Footer */
         footer {
             padding: 4rem 0 3rem;
             border-top: 1px solid var(--border-color);
@@ -408,135 +405,44 @@
             line-height: 1.8;
         }
 
-        .footer-section a:hover {
-            color: var(--accent-light);
-        }
+        .footer-section a:hover { color: var(--accent-light); }
+        .footer-links { display: flex; flex-direction: column; gap: 0.75rem; }
 
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        /* Animations */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.7;
-                transform: scale(1.1);
-            }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
         }
 
-        /* Responsive */
-        /* Mobile Responsive */
         @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-            
-            .container {
-                padding: 0 1.25rem;
-                max-width: 100%;
-            }
-            
-            header {
-                padding: 1.5rem 0;
-            }
-            
-            .site-title {
-                font-size: 1.75rem;
-            }
-            
-            .site-subtitle {
-                font-size: 0.875rem;
-            }
-            
-            .page-title {
-                font-size: 2rem;
-            }
-            
-            .page-header {
-                padding: 3rem 0 2rem;
-            }
-            
-            nav {
-                flex-direction: column;
-                gap: 0.75rem;
-                align-items: flex-start;
-            }
-            
-            nav a {
-                font-size: 0.875rem;
-                padding: 0.5rem 0;
-            }
-            
-            .prediction-timeline-item {
-                padding-left: 2rem;
-            }
-            
-            .timeline-dot {
-                left: 0;
-                width: 12px;
-                height: 12px;
-            }
-            
-            .timeline-title {
-                font-size: 1rem;
-            }
-            
-            .timeline-prediction {
-                font-size: 0.875rem;
-            }
-            
-            .timeline-date {
-                font-size: 0.75rem;
-            }
-            
-            footer {
-                padding: 2rem 0;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .footer-section h3 {
-                font-size: 1rem;
-            }
-            
-            body, html {
-                overflow-x: hidden;
-                width: 100%;
-            }
-            
-            * {
-                max-width: 100%;
-            }
+            body { font-size: 16px; }
+            .container { padding: 0 1.25rem; max-width: 100%; }
+            header { padding: 1.5rem 0; }
+            .site-title { font-size: 1.75rem; }
+            .site-subtitle { font-size: 0.875rem; }
+            .page-title { font-size: 2rem; }
+            .page-header { padding: 3rem 0 2rem; }
+            nav { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+            nav a { font-size: 0.875rem; padding: 0.5rem 0; }
+            .prediction-timeline-item { padding-left: 2rem; }
+            .timeline-dot { left: 0; width: 12px; height: 12px; }
+            .timeline-title { font-size: 1rem; }
+            .timeline-prediction { font-size: 0.875rem; }
+            .timeline-date { font-size: 0.75rem; }
+            footer { padding: 2rem 0; }
+            .footer-content { flex-direction: column; gap: 1.5rem; }
+            .footer-section h3 { font-size: 1rem; }
+            body, html { overflow-x: hidden; width: 100%; }
+            * { max-width: 100%; }
         }
-        
+
         @media (max-width: 480px) {
-            .site-title {
-                font-size: 1.5rem;
-            }
-            
-            .page-title {
-                font-size: 1.75rem;
-            }
+            .site-title { font-size: 1.5rem; }
+            .page-title { font-size: 1.75rem; }
         }
     </style>
 </head>
@@ -547,6 +453,7 @@
             <p class="site-subtitle">Independent Narrative Risk Analyst</p>
             <nav>
                 <a href="index.html">Home</a>
+                <a href="index.html#confirmed">Confirmed</a>
                 <a href="index.html#predictions">Predictions</a>
                 <a href="index.html#cases">Case Studies</a>
                 <a href="track-record.html" class="active">Track Record</a>
@@ -559,38 +466,66 @@
         <section class="page-header">
             <div class="container">
                 <h1 class="page-title">Track Record</h1>
-                <p class="page-description">
-                    Falsifiable predictions with timestamps. As outcomes resolve, this timeline becomes the evidence of whether narrative risk analysis works.
-                </p>
+                <p class="page-description">Falsifiable predictions with timestamps. As outcomes resolve, this timeline becomes the evidence of whether narrative risk analysis works.</p>
             </div>
         </section>
 
         <section class="timeline">
             <div class="container">
-                <!-- 2026 -->
+
+                <div class="predistribution-record">
+                    <h4>Pre-Distribution Record</h4>
+                    <p>Predictions on this page were documented and distributed before the events they describe. Distribution record includes <strong>physical filings to named executives</strong>, board-level email correspondence, timestamped LinkedIn posts, and Substack publications. All available on request. The purpose is not to claim credit retroactively. The purpose is to show the framework works before it is convenient to say so.</p>
+                </div>
+
+                <!-- 2026 CONFIRMED -->
                 <div class="year-section">
-                    <h2 class="year-header">2026</h2>
+                    <h2 class="year-header confirmed-year">2026 Confirmed (Non-Client)</h2>
 
                     <div class="prediction-timeline-item">
-    <div class="timeline-dot in-progress"></div>
-    <div class="timeline-content">
-        <div class="timeline-date">February 20, 2026</div>
-        <h3 class="timeline-title">Lowe's Narrative Collapse</h3>
-        <div class="timeline-prediction">
-            <p><strong>Decision:</strong> Revenue down $13.4B from peak. Buybacks exceeded free cash flow by $12.2B over two years while net debt doubled. The "Total Home Strategy" appeared in every earnings call across 15 quarters — 11 of which reported negative comparable sales. The language did not change. Only the year did. Analyst questions on recovery timing, DIY decline, and margin structure were consistently met with macro redirection and substitute metrics rather than direct answers. Domestic layoffs were framed publicly as labor reinvestment while the Bengaluru Global Capability Center grew from approximately 1,000 to 4,700 employees over the same period. The reallocation narrative and the offshore growth curve are not reconcilable.</p>
+                        <div class="timeline-dot confirmed"></div>
+                        <div class="timeline-content confirmed-content">
+                            <div class="timeline-date confirmed-date">Filed: February 9, 2026 | Confirmed: March 9, 2026</div>
+                            <h3 class="timeline-title">Novo Nordisk / Hims Partnership</h3>
+                            <div class="timeline-prediction">
+                                <p><strong class="green">Filed:</strong> Super Bowl 2026 Narrative Risk Report Card, published February 9, 2026. Prediction stated: "Feb 2027 Prediction: Major pricing restructure announced OR partnership with telehealth platform. Can't beat them, join them." Timestamped on LinkedIn and Substack before the announcement.</p>
 
-            <p><strong>Prediction:</strong> Acquisitions of FBM and ADG will not resolve the structural gap between what Lowe's claims operationally and what the market can defend. Comp sales remain negative through FY2026. Narrative pressure compounds at Q2 earnings.</p>
+                                <p><strong class="green">What Happened:</strong> Reuters reported March 6, 2026 that Novo Nordisk and Hims planned to announce a new partnership as soon as Monday March 9. The announcement came one year ahead of the predicted timeline. The pressure was worse than estimated. The direction was exact.</p>
 
-            <p><strong>Filed:</strong> Pre-earnings. Q4 FY2025 call confirmed all five flagged metrics — February 25, 2026.</p>
+                                <p><strong class="green">Timeline:</strong> April 2025 initial partnership. June 2025 Novo terminated. November 2025 talks resumed. February 2026 Hims launched $49 copycat. Novo sued. Hims pulled product. March 2026 partnership announced. The conflict compressed a predicted 2027 outcome into 2026.</p>
 
-            <p><strong>Falsifiable:</strong> Q1 FY2026 (May 2026), Q2 FY2026 (August 2026), Full Year FY2026 (February 2027)</p>
-        </div>
-        <div class="timeline-status in-progress">
-            Breach Confirmed — Monitoring
-        </div>
-        <a href="#" class="timeline-link" style="pointer-events: none; opacity: 0.45; cursor: default;">Analysis Coming Soon</a>
-    </div>
-</div>
+                                <p><strong class="green">Note:</strong> Prediction was documented publicly before the Reuters report. LinkedIn post and Substack publication serve as timestamped pre-distribution record. This was not a reaction to the news.</p>
+                            </div>
+                            <div class="timeline-status confirmed-status">Confirmed One Year Early</div>
+                            <a href="https://medium.com/@ermiasbraki/super-bowl-2026-narrative-risk-report-card-board-approval-vs-market-defense-fa06d37cc3a3" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Original Analysis</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2026 IN PROGRESS -->
+                <div class="year-section">
+                    <h2 class="year-header">2026 In Progress</h2>
+
+                    <div class="prediction-timeline-item">
+                        <div class="timeline-dot in-progress"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">February 20, 2026</div>
+                            <h3 class="timeline-title">Lowe's Narrative Collapse</h3>
+                            <div class="timeline-prediction">
+                                <p><strong>Decision:</strong> Revenue down $13.4B from peak. Buybacks exceeded free cash flow by $12.2B over two years while net debt doubled. The "Total Home Strategy" appeared in every earnings call across 15 quarters, 11 of which reported negative comparable sales. The language did not change. Only the year did. Analyst questions on recovery timing, DIY decline, and margin structure were consistently met with macro redirection and substitute metrics rather than direct answers. Domestic layoffs were framed publicly as labor reinvestment while the Bengaluru Global Capability Center grew from approximately 1,000 to 4,700 employees over the same period. The reallocation narrative and the offshore growth curve are not reconcilable.</p>
+
+                                <p><strong>Prediction:</strong> Acquisitions of FBM and ADG will not resolve the structural gap between what Lowe's claims operationally and what the market can defend. Comp sales remain negative through FY2026. Narrative pressure compounds at Q2 earnings.</p>
+
+                                <p><strong>Field Validation:</strong> Store-level employees are publicly confirming the workforce narrative gap in real time. Department supervisors at high-performing stores report payroll cuts inconsistent with store performance metrics. The pattern is being independently validated from inside the organization, without coordination.</p>
+
+                                <p><strong>Filed:</strong> Pre-earnings. Q4 FY2025 call confirmed all five flagged metrics, February 25, 2026.</p>
+
+                                <p><strong>Falsifiable:</strong> Q1 FY2026 (May 2026), Q2 FY2026 (August 2026), Full Year FY2026 (February 2027)</p>
+                            </div>
+                            <div class="timeline-status in-progress">Breach Confirmed, Monitoring</div>
+                            <a href="https://open.substack.com/pub/ermiasbraki/p/how-lowes-board-story-and-market" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Full Analysis</a>
+                        </div>
+                    </div>
 
                     <div class="prediction-timeline-item">
                         <div class="timeline-dot in-progress"></div>
@@ -598,66 +533,58 @@
                             <div class="timeline-date">February 15, 2026</div>
                             <h3 class="timeline-title">GoDaddy Customer Decline</h3>
                             <div class="timeline-prediction">
-                                <p><strong>Decision:</strong> Campaign featuring incompetence ("it's like you aren't a fraud") while stock down 58% from 52-week high, customer count declining 2.4% YoY.</p>
-                                
+                                <p><strong>Decision:</strong> Multi-year campaign anchoring brand in customer incompetence ("it's like you aren't a fraud") while stock down 58% from 52-week high, customer count declining 2.4% YoY. CEO and CFO both sold significant shares on the same day.</p>
                                 <p><strong>Prediction:</strong> GoDaddy will not return to sustained positive customer growth in 2026. If customer count still declining year-over-year by Q4 2026, acquisition conversations or strategic review by end of 2027.</p>
-                                
                                 <p><strong>Falsifiable:</strong> Q1 2026 (May), Q2 2026 (August), Q4 2026 (February 2027)</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_some-companies-dont-lose-customers-because-activity-7428497713337446400-eFS7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="timeline-link">Read Analysis</a>
+                            <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_some-companies-dont-lose-customers-because-activity-7428497713337446400-eFS7" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
-<div class="prediction-timeline-item">
-    <div class="timeline-dot in-progress"></div>
-    <div class="timeline-content">
-        <div class="timeline-date">February 12, 2026</div>
-        <h3 class="timeline-title">Salesforce Executive Exodus</h3>
-        <div class="timeline-prediction">
-            <p><strong>Crisis:</strong> 5 executives left in 2 months. Agentforce head said "returning to building startups." 1,400 employees signed letter.</p>
-            <p><strong>Prediction:</strong> Benioff hedges. Feb 25: vague statements. Q1 2027: more departures, committee announced.</p>
-            <p><strong>Falsifiable:</strong> Feb 25, 2026 earnings & Q1 2027</p>
-        </div>
-        <div class="timeline-status in-progress">In Progress</div>
-        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_time-to-play-ceo-for-a-day-imagine-youre-activity-7427686695409733632-aqZu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="timeline-link">Read Analysis</a>
-    </div>
-</div>
+                    <div class="prediction-timeline-item">
+                        <div class="timeline-dot in-progress"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">February 12, 2026</div>
+                            <h3 class="timeline-title">Salesforce Executive Exodus</h3>
+                            <div class="timeline-prediction">
+                                <p><strong>Crisis:</strong> 5 executives left in 2 months. Agentforce head said "returning to building startups." 1,400 employees signed letter.</p>
+                                <p><strong>Prediction:</strong> Benioff hedges. Feb 25: vague statements. Q1 2027: more departures, committee announced.</p>
+                                <p><strong>Falsifiable:</strong> Feb 25, 2026 earnings and Q1 2027</p>
+                            </div>
+                            <div class="timeline-status in-progress">In Progress</div>
+                            <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_time-to-play-ceo-for-a-day-imagine-youre-activity-7427686695409733632-aqZu" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
+                        </div>
+                    </div>
 
-<div class="prediction-timeline-item">
-    <div class="timeline-dot in-progress"></div>
-    <div class="timeline-content">
-        <div class="timeline-date">February 11, 2026</div>
-        <h3 class="timeline-title">Workday CEO Fourth Return</h3>
-        <div class="timeline-prediction">
-            <p><strong>Decision:</strong> Aneel Bhusri returning as CEO for fourth time.</p>
-            <p><strong>Prediction:</strong> Bhusri steps back again within 24 months. Fourth time isn't rescue—it's admission.</p>
-            <p><strong>Falsifiable:</strong> By February 2028</p>
-        </div>
-        <div class="timeline-status in-progress">In Progress</div>
-        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_aneel-bhusri-just-became-workdays-ceo-for-activity-7427327344379494400-NCex?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2iPb7iTlDovEFP22NJ7ME" class="timeline-link">Read Analysis</a>
-    </div>
-</div>
-                    
+                    <div class="prediction-timeline-item">
+                        <div class="timeline-dot in-progress"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">February 11, 2026</div>
+                            <h3 class="timeline-title">Workday CEO Fourth Return</h3>
+                            <div class="timeline-prediction">
+                                <p><strong>Decision:</strong> Aneel Bhusri returning as CEO for fourth time.</p>
+                                <p><strong>Prediction:</strong> Bhusri steps back again within 24 months. Fourth time isn't rescue, it's admission.</p>
+                                <p><strong>Falsifiable:</strong> By February 2028</p>
+                            </div>
+                            <div class="timeline-status in-progress">In Progress</div>
+                            <a href="https://open.substack.com/pub/ermiasbraki/p/workday-the-fourth-return-and-the" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
+                        </div>
+                    </div>
+
                     <div class="prediction-timeline-item">
                         <div class="timeline-dot in-progress"></div>
                         <div class="timeline-content">
                             <div class="timeline-date">February 9, 2026</div>
                             <h3 class="timeline-title">Super Bowl 2026 Narrative Risk Report Card</h3>
                             <div class="timeline-prediction">
-                                <p><strong>Analysis:</strong> Tracked 9 Super Bowl LX advertisers using Board Approval vs Market Defense scoring framework. Gap 0 (aligned): 3 brands. Gap 2-3 (severe risk): 6 brands.</p>
-                                
-                                <p><strong>Featured Analyses:</strong><br>
-                                • GLP-1 Drug War: Novo/Wegovy ran $30M celebrity ad avoiding pricing entirely while Hims launched $49 pill Feb 5, Novo threatened lawsuit, FDA intervened Feb 7, Hims backed down day before Super Bowl. Ro used clinical data approach.<br>
-                                • Privacy Contrast: Meta/Oakley "Athletic Intelligence" ad avoided privacy concerns (customer base doesn't care). Ring "lost dog finder" landed as surveillance state (customer base cares deeply).<br>
-                                • Vital Farms: $500k 5am hedge strategy got 1 global social mention.</p>
-                                
-                                <p><strong>Predictions:</strong> Q4 2026 metrics (pricing power, market share, comps) and Feb 2027 outcomes (leadership changes, repositions, acquisitions) for all 9 brands.</p>
-                                
+                                <p><strong>Analysis:</strong> Tracked 9 Super Bowl LX advertisers using Board Approval vs Market Defense scoring. Gap 0 (aligned): 3 brands. Gap 2-3 (severe risk): 6 brands.</p>
+                                <p><strong>Featured:</strong> GLP-1 Drug War (Novo vs Hims vs Ro), Meta/Oakley vs Ring privacy contrast, Vital Farms' $500k hedge that got 1 global mention.</p>
+                                <p><strong>Predictions:</strong> Q4 2026 metrics and Feb 2027 outcomes for all 9 brands. One prediction (Novo/Hims) confirmed March 2026, one year early.</p>
                                 <p><strong>Falsifiable:</strong> Q4 2026 earnings, Feb 2027 strategic changes</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://medium.com/@ermiasbraki/super-bowl-2026-narrative-risk-report-card-board-approval-vs-market-defense-fa06d37cc3a3" class="timeline-link">Read Analysis</a>
+                            <a href="https://medium.com/@ermiasbraki/super-bowl-2026-narrative-risk-report-card-board-approval-vs-market-defense-fa06d37cc3a3" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
@@ -667,16 +594,13 @@
                             <div class="timeline-date">February 5, 2026</div>
                             <h3 class="timeline-title">Pandora Commodity Strategy</h3>
                             <div class="timeline-prediction">
-                                <p><strong>Decision:</strong> New CEO (1 month in role) swaps silver for platinum to escape commodity volatility. Silver doubled in 2025. Stock down 63%. Margins compressing from 23.9% to 21-22%. US consumer sentiment at "60-year lows."</p>
-                                
+                                <p><strong>Decision:</strong> New CEO (1 month in role) swaps silver for platinum to escape commodity volatility. Silver doubled in 2025. Stock down 63%. Margins compressing from 23.9% to 21-22%.</p>
                                 <p><strong>Problem:</strong> Brand built on commodity value ($70 for quality silver), not emotional value. Kay Jewelers survives price volatility because customers buy sentiment. Pandora doesn't because customers were always buying silver content.</p>
-                                
-                                <p><strong>Prediction:</strong> By Q4 2026, either (1) margins stay compressed despite metal swap, (2) consumer resistance to platinum-plated versus sterling silver heritage, or (3) demand continues declining because brand equity gap wasn't addressed.</p>
-                                
+                                <p><strong>Prediction:</strong> By Q4 2026: margins stay compressed despite metal swap, consumer resistance to platinum-plated vs sterling silver heritage, or demand continues declining because brand equity gap wasn't addressed.</p>
                                 <p><strong>Falsifiable:</strong> Q4 2026 earnings (February 2027)</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://medium.com/@ermiasbraki/pandora-when-platinum-cant-save-what-silver-built-838c618e7d8f" class="timeline-link">Read Analysis</a>
+                            <a href="https://medium.com/@ermiasbraki/pandora-when-platinum-cant-save-what-silver-built-838c618e7d8f" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
@@ -687,13 +611,11 @@
                             <h3 class="timeline-title">Vital Farms Premium Positioning</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Decision:</strong> 5 AM Super Bowl ad while customers question premium justification. Michigan State study found 23.5% linoleic acid (higher than canola oil). Market asks: what justifies $7 to $8/dozen vs $3 to $4 conventional?</p>
-                                
-                                <p><strong>Prediction:</strong> By Q4 2026, either (1) pricing power erodes as margins compress, or (2) explicit repositioning from nutritional superiority to ethical-only positioning.</p>
-                                
+                                <p><strong>Prediction:</strong> By Q4 2026: pricing power erodes as margins compress, or explicit repositioning from nutritional superiority to ethics-only positioning.</p>
                                 <p><strong>Falsifiable:</strong> Q4 2026 earnings call (early 2027)</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://medium.com/@ermiasbraki/vital-farms-board-approval-vs-market-defense-0e2d7fc240f1" class="timeline-link">Read Analysis</a>
+                            <a href="https://medium.com/@ermiasbraki/vital-farms-board-approval-vs-market-defense-0e2d7fc240f1" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
@@ -704,13 +626,11 @@
                             <h3 class="timeline-title">PayPal CEO Appointment</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Decision:</strong> Cost-cutter Enrique Lores replaces growth CEO after 2.5 years.</p>
-                                
                                 <p><strong>Prediction:</strong> Margins improve but revenue continues declining. Product problem disguised as execution issue.</p>
-                                
                                 <p><strong>Falsifiable:</strong> Q3 2027</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6?utm_source=share&utm_medium=member_desktop" class="timeline-link">Read Analysis</a>
+                            <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
@@ -721,13 +641,11 @@
                             <h3 class="timeline-title">Disney CEO Appointment</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Decision:</strong> Parks chief Josh D'Amaro promoted over content leader Dana Walden.</p>
-                                
                                 <p><strong>Prediction:</strong> Parks continue performing on legacy IP. Content pipeline stays broken. Future attractions lack foundation.</p>
-                                
                                 <p><strong>Falsifiable:</strong> 2028</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6?utm_source=share&utm_medium=member_desktop" class="timeline-link">Read Analysis</a>
+                            <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
@@ -738,13 +656,11 @@
                             <h3 class="timeline-title">UPS Amazon Exit</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Decision:</strong> Cut 78,000 jobs, ended Amazon partnership (1B+ packages/year), $6.5B cost cuts.</p>
-                                
                                 <p><strong>Prediction:</strong> Lost $2.2B contribution to fixed costs. Network utilization problems. Can't replace Amazon volume. Margins flat/down by Q4 2026.</p>
-                                
                                 <p><strong>Falsifiable:</strong> Q4 2026 earnings (February 2027)</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://medium.com/@ermiasbraki/ups-cuts-30-000-jobs-to-end-amazon-partnership-bold-leadership-or-cost-cutting-disguised-as-4ce026c5df31" class="timeline-link">Read Analysis</a>
+                            <a href="https://medium.com/@ermiasbraki/ups-cuts-30-000-jobs-to-end-amazon-partnership-bold-leadership-or-cost-cutting-disguised-as-4ce026c5df31" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
@@ -754,14 +670,12 @@
                             <div class="timeline-date">February 1, 2026</div>
                             <h3 class="timeline-title">Target CEO Transition</h3>
                             <div class="timeline-prediction">
-                                <p><strong>Decision:</strong> 23 year insider Michael Fiddelke promoted over external disruption.</p>
-                                
+                                <p><strong>Decision:</strong> 23-year insider Michael Fiddelke promoted over external disruption.</p>
                                 <p><strong>Prediction:</strong> Operational improvements without strategic repositioning. Sales remain flat through 2026.</p>
-                                
                                 <p><strong>Falsifiable:</strong> Q4 2026 earnings (February 2027)</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://medium.com/@ermiasbraki/targets-ceo-transition-when-continuity-becomes-the-risk-8f7d0f686b06" class="timeline-link">Read Analysis</a>
+                            <a href="https://open.substack.com/pub/ermiasbraki/p/targets-ceo-transition-when-continuity" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
@@ -772,11 +686,10 @@
                             <h3 class="timeline-title">Lululemon Premium Dilution</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Analysis:</strong> $8B revenue growth destroyed premium positioning by expanding from yoga studios to mass market.</p>
-                                
-                                <p><strong>Status:</strong> Monitoring brand equity erosion and pricing power sustainability.</p>
+                                <p><strong>Status:</strong> Monitoring brand equity erosion and pricing power sustainability. Live proxy fight with Wilson and Elliott Management adds new pressure.</p>
                             </div>
                             <div class="timeline-status monitoring">Monitoring</div>
-                            <a href="https://medium.com/@ermiasbraki/lululemon-how-8b-in-revenue-growth-destroyed-what-made-them-worth-a-premium-85c7d1fcef20" class="timeline-link">Read Analysis</a>
+                            <a href="https://medium.com/@ermiasbraki/lululemon-how-8b-in-revenue-growth-destroyed-what-made-them-worth-a-premium-85c7d1fcef20" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
 
@@ -786,14 +699,12 @@
                             <div class="timeline-date">2026</div>
                             <h3 class="timeline-title">Dos Equis: Most Interesting Man Returns</h3>
                             <div class="timeline-prediction">
-                                <p><strong>Decision:</strong> Bringing back "Most Interesting Man" at age 87 after killing campaign 10 years ago.</p>
-                                
-                                <p><strong>Prediction:</strong> Answer by end of 2026: Resurrection or reminder they killed it?</p>
-                                
+                                <p><strong>Decision:</strong> Bringing back "Most Interesting Man" at age 87 after killing the campaign 10 years ago.</p>
+                                <p><strong>Prediction:</strong> Answer by end of 2026: resurrection or reminder they killed it?</p>
                                 <p><strong>Falsifiable:</strong> Q4 2026 sales data</p>
                             </div>
                             <div class="timeline-status monitoring">Monitoring</div>
-                            <a href="https://medium.com/@ermiasbraki/dos-equis-killed-the-most-interesting-man-to-chase-millennials-acdd78bd3235" class="timeline-link">Read Analysis</a>
+                            <a href="https://medium.com/@ermiasbraki/dos-equis-killed-the-most-interesting-man-to-chase-millennials-acdd78bd3235" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
                 </div>
@@ -809,13 +720,11 @@
                             <h3 class="timeline-title">Jaguar Rebrand</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Decision:</strong> Destroyed 102 years of heritage. Stopped all production. Ultra-luxury repositioning without brand equity.</p>
-                                
-                                <p><strong>Prediction:</strong> First-year sales <5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</p>
-                                
+                                <p><strong>Prediction:</strong> First-year sales under 5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</p>
                                 <p><strong>Falsifiable:</strong> 2026 sales, 2027 strategic review, 2029 brand survival</p>
                             </div>
                             <div class="timeline-status in-progress">In Progress</div>
-                            <a href="https://medium.com/@ermiasbraki/jaguar-will-fail-by-2029-when-leaders-optimize-for-approval-over-defense-e87c3d4ed5f9" class="timeline-link">Read Analysis</a>
+                            <a href="https://medium.com/@ermiasbraki/jaguar-will-fail-by-2029-when-leaders-optimize-for-approval-over-defense-e87c3d4ed5f9" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Analysis</a>
                         </div>
                     </div>
                 </div>
@@ -831,11 +740,10 @@
                             <h3 class="timeline-title">Nike: Elliott Hill Returns</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Analysis:</strong> Strategic narrative coherence drives market confidence. $6B market cap gain under Elliott Hill. Authority to reclaim positioning.</p>
-                                
-                                <p><strong>Outcome:</strong> Validated - Nike demonstrated how maintaining narrative authority through leadership transition drives market performance.</p>
+                                <p><strong>Outcome:</strong> Validated. Nike demonstrated how maintaining narrative authority through leadership transition drives market performance.</p>
                             </div>
                             <div class="timeline-status resolved">Validated</div>
-                            <a href="https://medium.com/@ermiasbraki/nike-how-strategic-narrative-risk-drove-stock-to-all-time-highs-6e65226927a8" class="timeline-link">Read Case Study</a>
+                            <a href="https://medium.com/@ermiasbraki/nike-how-strategic-narrative-risk-drove-stock-to-all-time-highs-6e65226927a8" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -851,11 +759,10 @@
                             <h3 class="timeline-title">Bud Light Collapse</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Analysis:</strong> $400M revenue collapse from weak narrative foundations. Small contradictions compound into public failure when positioning lacks defense.</p>
-                                
-                                <p><strong>Outcome:</strong> Validated - Demonstrated how narrative contradictions create catastrophic brand failure when foundation can't be defended.</p>
+                                <p><strong>Outcome:</strong> Validated. Demonstrated how narrative contradictions create catastrophic brand failure when foundation can't be defended under pressure.</p>
                             </div>
                             <div class="timeline-status resolved">Validated</div>
-                            <a href="https://medium.com/@ermiasbraki" class="timeline-link">Read Case Study</a>
+                            <a href="https://medium.com/@ermiasbraki" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -871,14 +778,14 @@
                             <h3 class="timeline-title">Starbucks: Founder Dependency</h3>
                             <div class="timeline-prediction">
                                 <p><strong>Analysis:</strong> Identity concentration risk after founder departure. Meaning remained tied to founder, could not be sustained by institution.</p>
-                                
-                                <p><strong>Status:</strong> Ongoing - Monitoring whether institutional narrative can replace founder authority.</p>
+                                <p><strong>Status:</strong> Ongoing. Monitoring whether institutional narrative can replace founder authority.</p>
                             </div>
                             <div class="timeline-status monitoring">Ongoing</div>
-                            <a href="https://medium.com/@ermiasbraki/starbucks-why-starbucks-still-cannot-operate-without-its-founder-359552d19119" class="timeline-link">Read Case Study</a>
+                            <a href="https://medium.com/@ermiasbraki/starbucks-why-starbucks-still-cannot-operate-without-its-founder-359552d19119" class="timeline-link" target="_blank" rel="noopener noreferrer">Read Case Study</a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -889,12 +796,18 @@
                 <div class="footer-section">
                     <h3>Analysis</h3>
                     <div class="footer-links">
-                        <a href="https://medium.com/@ermiasbraki" target="_blank">Medium</a>
-                        <a href="https://www.linkedin.com/in/ermias-braki-115a62336" target="_blank">LinkedIn</a>
+                        <a href="https://ermiasbraki.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+                        <a href="https://medium.com/@ermiasbraki" target="_blank" rel="noopener noreferrer">Medium</a>
+                        <a href="https://www.linkedin.com/in/ermias-braki-115a62336" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                 </div>
-
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <p>For narrative risk assessment inquiries:</p>
-                    <a href="/cdn-cgi/l/email-protection#9ffaedf2f6feecdffaedf2f6feecfdedfef4f6b1fcf0f2"><span class="__cf_email__" data-cfemail="f792859a9e9684b792859a9e9684
+                    <a href="mailto:ermias@ermiasbraki.com">ermias@ermiasbraki.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
