@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Ermias Braki</title>
-    
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Private narrative risk assessment for Fortune 500, late-stage startups, and executives. Directional Assessment ($5K), Complete Risk Assessment ($20K-$75K), Post-Crisis Forensic ($50K-$100K), Annual Retainer ($150K-$300K).">
     <meta name="keywords" content="narrative risk assessment, strategic consulting, executive advisory, crisis management, board advisory, strategic risk">
     <meta name="author" content="Ermias Braki">
     <link rel="canonical" href="https://ermiasbraki.com/services.html">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ermiasbraki.com/services.html">
     <meta property="og:title" content="Services | Ermias Braki">
     <meta property="og:description" content="Private narrative risk assessment for Fortune 500, late-stage startups, and executives. Confidential analysis of high-stakes strategic decisions.">
     <meta property="og:site_name" content="Ermias Braki">
-    
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Ermiasbraki">
     <meta name="twitter:creator" content="@Ermiasbraki">
     <meta name="twitter:title" content="Services | Ermias Braki">
     <meta name="twitter:description" content="Private narrative risk assessment for Fortune 500, late-stage startups, and executives. Confidential analysis of strategic decisions.">
-    
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK15RZHNRR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -33,7 +25,6 @@
         gtag('js', new Date());
         gtag('config', 'G-ZK15RZHNRR');
     </script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -49,11 +40,7 @@
             --border-color: #1e3a5f;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Work Sans', sans-serif;
@@ -67,10 +54,7 @@
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background-image: 
                 radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
@@ -81,128 +65,115 @@
         body::after {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             opacity: 0.3;
             pointer-events: none;
             z-index: 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
+
+        header { padding: 3rem 0 2rem; border-bottom: 1px solid var(--border-color); animation: fadeIn 0.8s ease-out; }
+
+        .site-title { font-family: 'Crimson Pro', serif; font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary); }
+        .site-title a { color: var(--text-primary); text-decoration: none; }
+        .site-subtitle { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.1em; }
+
+        nav { margin-top: 2rem; display: flex; gap: 2rem; }
+        nav a { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; color: var(--text-secondary); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.3s ease; position: relative; }
+        nav a:hover, nav a.active { color: var(--accent-light); }
+        nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent-blue); transition: width 0.3s ease; }
+        nav a:hover::after, nav a.active::after { width: 100%; }
+
+        .page-header { padding: 6rem 0 4rem; animation: fadeIn 1s ease-out 0.2s both; }
+        .page-title { font-family: 'Crimson Pro', serif; font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); text-shadow: 0 2px 12px rgba(0,0,0,0.4); letter-spacing: -0.02em; }
+        .page-description { font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; line-height: 1.8; margin-bottom: 1rem; }
+        .page-intro { font-size: 1.125rem; color: var(--text-primary); max-width: 800px; line-height: 1.8; margin-top: 2rem; }
+
+        .intake-section {
+            padding: 0 0 4rem;
+            animation: fadeIn 1s ease-out 0.3s both;
         }
 
-        header {
-            padding: 3rem 0 2rem;
-            border-bottom: 1px solid var(--border-color);
-            animation: fadeIn 0.8s ease-out;
+        .intake-box {
+            max-width: 800px;
+            background: linear-gradient(135deg, rgba(15,29,47,0.8) 0%, rgba(10,22,40,0.9) 100%);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 4px;
+            padding: 2.5rem;
         }
 
-        .site-title {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .site-title a {
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-
-        .site-subtitle {
+        .intake-title {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        nav {
-            margin-top: 2rem;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        nav a:hover, nav a.active {
+            letter-spacing: 0.15em;
             color: var(--accent-light);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-blue);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after, nav a.active::after {
-            width: 100%;
-        }
-
-        .page-header {
-            padding: 6rem 0 4rem;
-            animation: fadeIn 1s ease-out 0.2s both;
-        }
-
-        .page-title {
-            font-family: 'Crimson Pro', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .intake-body p {
+            font-size: 1rem;
             color: var(--text-primary);
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-            letter-spacing: -0.02em;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
         }
 
-        .page-description {
-            font-size: 1.25rem;
+        .intake-items {
+            margin: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .intake-item {
+            font-size: 1rem;
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .intake-item strong {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-light);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .intake-footer {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .intake-footer p {
+            font-size: 0.9375rem;
             color: var(--text-secondary);
-            max-width: 800px;
-            line-height: 1.8;
-            margin-bottom: 1rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
         }
 
-        .page-intro {
-            font-size: 1.125rem;
-            color: var(--text-primary);
-            max-width: 800px;
-            line-height: 1.8;
-            margin-top: 2rem;
+        .intake-footer p:last-child { margin-bottom: 0; }
+
+        .intake-email {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9375rem;
+            color: var(--accent-light);
+            text-decoration: none;
         }
 
-        .services-grid {
-            padding: 4rem 0;
-            display: grid;
-            gap: 3rem;
-            animation: fadeIn 1s ease-out 0.4s both;
-        }
+        .intake-email:hover { color: var(--accent-bright); }
+
+        .services-grid { padding: 0 0 4rem; display: grid; gap: 3rem; animation: fadeIn 1s ease-out 0.4s both; }
 
         .service-card {
-            background: linear-gradient(135deg, rgba(15, 29, 47, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(15,29,47,0.6) 0%, rgba(10,22,40,0.8) 100%);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
             border-left: 4px solid var(--accent-blue);
@@ -211,304 +182,54 @@
             transition: all 0.3s ease;
         }
 
-        .service-card:hover {
-            border-color: var(--accent-blue);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
-        }
+        .service-card:hover { border-color: var(--accent-blue); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(37,99,235,0.2); }
 
-        .service-header {
-            margin-bottom: 2rem;
-        }
+        .service-header { margin-bottom: 2rem; }
+        .service-title { font-family: 'Crimson Pro', serif; font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .service-subtitle { font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; }
+        .service-section { margin-bottom: 2rem; }
+        .service-section:last-child { margin-bottom: 0; }
+        .service-section-title { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600; }
+        .service-section ul { list-style: none; padding: 0; }
+        .service-section li { padding-left: 1.5rem; margin-bottom: 0.75rem; position: relative; color: var(--text-primary); line-height: 1.7; }
+        .service-section li::before { content: '•'; position: absolute; left: 0; color: var(--accent-blue); font-weight: 700; }
+        .service-pricing { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
+        .service-price { font-family: 'Crimson Pro', serif; font-size: 1.5rem; font-weight: 700; color: var(--accent-bright); margin-bottom: 0.5rem; }
+        .service-price-note { font-size: 0.875rem; color: var(--text-secondary); font-style: italic; }
+        .service-timeline { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; color: var(--accent-light); margin-top: 1rem; font-weight: 500; }
 
-        .service-title {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
+        footer { padding: 4rem 0 3rem; border-top: 1px solid var(--border-color); margin-top: 6rem; }
+        .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 3rem; }
+        .footer-section h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 1rem; }
+        .footer-section p, .footer-section a { font-size: 0.9375rem; color: var(--text-primary); text-decoration: none; line-height: 1.8; }
+        .footer-section a:hover { color: var(--accent-light); }
+        .footer-links { display: flex; flex-direction: column; gap: 0.75rem; }
 
-        .service-subtitle {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        .service-section {
-            margin-bottom: 2rem;
-        }
-
-        .service-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .service-section-title {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent-light);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .service-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .service-section li {
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-            position: relative;
-            color: var(--text-primary);
-            line-height: 1.7;
-        }
-
-        .service-section li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-            font-weight: 700;
-        }
-
-        .service-pricing {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .service-price {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-bright);
-            margin-bottom: 0.5rem;
-        }
-
-        .service-price-note {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        .service-timeline {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.875rem;
-            color: var(--accent-light);
-            margin-top: 1rem;
-            font-weight: 500;
-        }
-
-        .contact-section {
-            padding: 4rem 0;
-            text-align: center;
-            animation: fadeIn 1s ease-out 0.6s both;
-        }
-
-        .contact-box {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 3rem;
-            background: linear-gradient(135deg, rgba(15, 29, 47, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-        }
-
-        .contact-title {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-
-        .contact-description {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .contact-email {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.125rem;
-            color: var(--accent-light);
-            text-decoration: none;
-            display: inline-block;
-            padding: 1rem 2rem;
-            border: 1px solid var(--accent-blue);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-email:hover {
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--accent-bright);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
-        }
-
-        .contact-info {
-            margin-top: 2rem;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        footer {
-            padding: 4rem 0 3rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 6rem;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 3rem;
-        }
-
-        .footer-section h3 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            font-size: 0.9375rem;
-            color: var(--text-primary);
-            text-decoration: none;
-            line-height: 1.8;
-        }
-
-        .footer-section a:hover {
-            color: var(--accent-light);
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Mobile Responsive */
         @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-            
-            .container {
-                padding: 0 1.25rem;
-                max-width: 100%;
-            }
-            
-            header {
-                padding: 1.5rem 0;
-            }
-            
-            .site-title {
-                font-size: 1.75rem;
-            }
-            
-            .site-subtitle {
-                font-size: 0.875rem;
-            }
-            
-            .page-title {
-                font-size: 2rem;
-            }
-            
-            .page-subtitle {
-                font-size: 1rem;
-            }
-            
-            .page-header {
-                padding: 3rem 0 2rem;
-            }
-            
-            nav {
-                flex-direction: column;
-                gap: 0.75rem;
-                align-items: flex-start;
-            }
-            
-            nav a {
-                font-size: 0.875rem;
-                padding: 0.5rem 0;
-            }
-            
-            .service-card {
-                padding: 1.5rem;
-            }
-            
-            .service-title {
-                font-size: 1.25rem;
-            }
-            
-            .service-price {
-                font-size: 1.125rem;
-            }
-            
-            .service-description {
-                font-size: 0.875rem;
-            }
-            
-            footer {
-                padding: 2rem 0;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .footer-section h3 {
-                font-size: 1rem;
-            }
-            
-            body, html {
-                overflow-x: hidden;
-                width: 100%;
-            }
-            
-            * {
-                max-width: 100%;
-            }
+            body { font-size: 16px; }
+            .container { padding: 0 1.25rem; max-width: 100%; }
+            header { padding: 1.5rem 0; }
+            .site-title { font-size: 1.75rem; }
+            .page-title { font-size: 2rem; }
+            .page-header { padding: 3rem 0 2rem; }
+            nav { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+            nav a { font-size: 0.875rem; padding: 0.5rem 0; }
+            .service-card { padding: 1.5rem; }
+            .service-title { font-size: 1.25rem; }
+            .service-price { font-size: 1.125rem; }
+            .intake-box { padding: 1.5rem; }
+            footer { padding: 2rem 0; }
+            .footer-content { flex-direction: column; gap: 1.5rem; }
+            body, html { overflow-x: hidden; width: 100%; }
+            * { max-width: 100%; }
         }
-        
+
         @media (max-width: 480px) {
-            .site-title {
-                font-size: 1.5rem;
-            }
-            
-            .page-title {
-                font-size: 1.75rem;
-            }
-            
-            .service-card {
-                padding: 1.25rem;
-            }
+            .site-title { font-size: 1.5rem; }
+            .page-title { font-size: 1.75rem; }
+            .service-card { padding: 1.25rem; }
         }
     </style>
 </head>
@@ -531,12 +252,39 @@
         <section class="page-header">
             <div class="container">
                 <h1 class="page-title">Private Assessment</h1>
-                <p class="page-description">
-                    Most analysis here is public. For decisions that can't be evaluated publicly (upcoming acquisitions, leadership transitions, rebrands, crisis response), I provide confidential narrative risk assessment.
-                </p>
-                <p class="page-intro">
-                    Pricing reflects the gravity of the decision and the cost of getting it wrong. Not billed by the hour. Not billed by page count. Each engagement is scoped around a specific decision where narrative contradictions could undermine trust, strategy, or execution.
-                </p>
+                <p class="page-description">Most analysis here is public. For decisions that can't be evaluated publicly (upcoming acquisitions, leadership transitions, rebrands, crisis response), I provide confidential narrative risk assessment.</p>
+                <p class="page-intro">Pricing reflects the gravity of the decision and the cost of getting it wrong. Not billed by the hour. Not billed by page count. Each engagement is scoped around a specific decision where narrative contradictions could undermine trust, strategy, or execution.</p>
+            </div>
+        </section>
+
+        <section class="intake-section">
+            <div class="container">
+                <div class="intake-box">
+                    <div class="intake-title">Before You Reach Out</div>
+                    <div class="intake-body">
+                        <p>If the public work resonates and you are sitting with a decision that has similar characteristics, that is enough to reach out. A gap between what is being said internally and what the data shows, a transition that is not landing the way it was supposed to, a narrative that worked until it didn't. You do not need to have it figured out.</p>
+                        <p>You do not need to name the company in your first message. A brief description of the decision type and the timeline pressure is enough to determine whether this is worth pursuing.</p>
+                        <p>Send a short note to <a href="mailto:ermias@ermiasbraki.com" class="intake-email">ermias@ermiasbraki.com</a> with three things:</p>
+                        <div class="intake-items">
+                            <div class="intake-item">
+                                <strong>The Type of Decision.</strong>
+                                Leadership transition, acquisition, rebrand, crisis response, or other.
+                            </div>
+                            <div class="intake-item">
+                                <strong>Organizational Scale.</strong>
+                                Fortune 500, public company, mid-market, late-stage startup, or individual executive.
+                            </div>
+                            <div class="intake-item">
+                                <strong>The Timeline.</strong>
+                                When the decision resolves or when the pressure becomes critical.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intake-footer">
+                        <p>Response within 24 hours. If there is a fit, the next step is a written scope, not a sales call.</p>
+                        <p>All communication is confidential by default.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -547,7 +295,6 @@
                         <h2 class="service-title">Directional Assessment</h2>
                         <p class="service-subtitle">A preliminary evaluation to determine whether narrative risk exists and where it's concentrated.</p>
                     </div>
-
                     <div class="service-section">
                         <h3 class="service-section-title">What's Included</h3>
                         <ul>
@@ -556,7 +303,6 @@
                             <li>Recommendation on whether full diagnostic is warranted</li>
                         </ul>
                     </div>
-
                     <div class="service-section">
                         <h3 class="service-section-title">What's Not Included</h3>
                         <ul>
@@ -564,7 +310,6 @@
                             <li>Based on publicly available information only</li>
                         </ul>
                     </div>
-
                     <div class="service-pricing">
                         <div class="service-price">$5,000</div>
                         <div class="service-price-note">Waived for qualified referrals</div>
@@ -577,7 +322,6 @@
                         <h2 class="service-title">Complete Narrative Risk Assessment</h2>
                         <p class="service-subtitle">An independent, forensic examination of the narrative architecture surrounding a high-stakes decision.</p>
                     </div>
-
                     <div class="service-section">
                         <h3 class="service-section-title">What's Included</h3>
                         <ul>
@@ -589,14 +333,12 @@
                             <li>90 minute readout call to discuss findings and answer questions</li>
                         </ul>
                     </div>
-
                     <div class="service-section">
                         <h3 class="service-section-title">What's Not Included</h3>
                         <ul>
                             <li>Implementation, ongoing advisory, messaging execution, or crisis response</li>
                         </ul>
                     </div>
-
                     <div class="service-pricing">
                         <div class="service-price">$20,000 to $75,000</div>
                         <div class="service-price-note">
@@ -615,7 +357,6 @@
                         <h2 class="service-title">Post-Crisis Narrative Forensic</h2>
                         <p class="service-subtitle">After a public controversy or trust failure, a forensic analysis of what happened and what must change to prevent recurrence.</p>
                     </div>
-
                     <div class="service-section">
                         <h3 class="service-section-title">What's Included</h3>
                         <ul>
@@ -626,7 +367,6 @@
                             <li>2 hour executive presentation</li>
                         </ul>
                     </div>
-
                     <div class="service-pricing">
                         <div class="service-price">$50,000 to $100,000</div>
                         <div class="service-price-note">
@@ -642,7 +382,6 @@
                         <h2 class="service-title">Annual Narrative Risk Retainer</h2>
                         <p class="service-subtitle">Proactive narrative risk management for organizations operating in sustained high-exposure environments.</p>
                     </div>
-
                     <div class="service-section">
                         <h3 class="service-section-title">What's Included</h3>
                         <ul>
@@ -652,51 +391,30 @@
                             <li>Annual narrative architecture review with executive presentation</li>
                         </ul>
                     </div>
-
                     <div class="service-pricing">
                         <div class="service-price">$150,000 to $300,000/year</div>
                         <div class="service-price-note">
-                            Mid-Market (<$500M revenue): $150,000/year<br>
-                            Public Company ($500M–$5B): $200,000/year<br>
+                            Mid-Market (&lt;$500M revenue): $150,000/year<br>
+                            Public Company ($500M to $5B): $200,000/year<br>
                             Fortune 500: $300,000/year
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-box">
-                    <h2 class="contact-title">Get Started</h2>
-                    <p class="contact-description">
-                        For narrative risk assessment inquiries, contact:
-                    </p>
-                    <a href="mailto:ermias@ermiasbraki.com" class="contact-email">ermias@ermiasbraki.com</a>
-                    <div class="contact-info">
-                        Please include:<br>
-                        Brief context on the decision or situation under consideration<br>
-                        Organizational type and scale<br>
-                        Timeline or urgency<br><br>
-                        All communication is handled confidentially.<br>
-                        Initial consultations are conducted to determine fit and scope before engagement.
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-     <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Analysis</h3>
                     <div class="footer-links">
+                        <a href="https://ermiasbraki.substack.com/" target="_blank">Substack</a>
                         <a href="https://medium.com/@ermiasbraki" target="_blank">Medium</a>
                         <a href="https://www.linkedin.com/in/ermias-braki-115a62336" target="_blank">LinkedIn</a>
                     </div>
                 </div>
-
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <p>For narrative risk assessment inquiries:</p>
@@ -704,4 +422,6 @@
                 </div>
             </div>
         </div>
-</div>
+    </footer>
+</body>
+</html>
