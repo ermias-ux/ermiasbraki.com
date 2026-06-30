@@ -593,6 +593,19 @@
             .hero-statement { font-size: 1rem; }
             .prediction-card { padding: 1rem; }
         }
+        .predictions-accordion { display: flex; flex-direction: column; gap: 10px; }
+        .acc-item { border: 1px solid var(--border-color); border-radius: 6px; overflow: hidden; background: var(--card-bg); }
+        .acc-trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 1.1rem 1.4rem; background: transparent; border: none; cursor: pointer; text-align: left; font-family: inherit; }
+        .acc-trigger:hover { background: rgba(96, 165, 250, 0.05); }
+        .acc-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+        .acc-left .status-dot { flex-shrink: 0; }
+        .acc-title { font-size: 1.02rem; font-weight: 600; margin: 0; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .acc-meta { font-size: 0.8rem; color: var(--text-secondary); margin: 3px 0 0; font-family: 'JetBrains Mono', monospace; }
+        .acc-chevron { font-size: 1.2rem; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.2s ease; }
+        .acc-chevron.open { transform: rotate(180deg); }
+        .acc-panel { display: none; padding: 0 1.4rem 1.4rem; border-top: 1px solid var(--border-color); }
+        .acc-panel.open { display: block; }
+        .acc-panel-inner { padding-top: 1.1rem; display: flex; flex-direction: column; gap: 0.9rem; }
     </style>
 </head>
 <body>
@@ -681,262 +694,404 @@
                     <a href="https://open.substack.com/pub/ermiasbraki/p/how-lowes-board-story-and-market-f83?r=7c5afn&utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link" target="_blank">Read Full Analysis</a>
                 </div>
 
-                <div class="predictions-grid">
+                <div class="predictions-accordion">
 
-                    <!-- KOHL'S CARD — NEW -->
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Kohl's: The Board That Blinked First (Part 1 of 2)</h3>
-                        <div class="prediction-date">June 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Board terminated CEO Ashley Buchanan for cause 100 days into his tenure, forfeited $17M in RSUs, and placed Board Chair Michael Bender in the seat without an external search. Bender immediately began unwinding five years of identity drift (Sephora, Babies R Us, Limited Too) that alienated the core mid-income family shopper across eleven consecutive quarters of declining comparable sales.</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-kohls')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Kohl's: The Board That Blinked First (Part 1 of 2)</p>
+                                    <p class="acc-meta">June 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-kohls">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-kohls">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Board terminated CEO Ashley Buchanan for cause 100 days into his tenure, forfeited $17M in RSUs, and placed Board Chair Michael Bender in the seat without an external search. Bender immediately began unwinding five years of identity drift (Sephora, Babies R Us, Limited Too) that alienated the core mid-income family shopper across eleven consecutive quarters of declining comparable sales.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Kohl's posts at least one quarter of positive comparable sales before fiscal year end (January/February 2027). Bender remains CEO with no further executive-level governance disruption. Q3 fiscal 2026 shows continued improvement in the Kohl's card customer segment and proprietary brand performance.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Contingency:</span>
+                                    <span class="prediction-value">Supplier finance program obligations exceeding $350M changes the read on cash flow recovery. Prediction revisited publicly if crossed.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">Q2 fiscal 2026 (August 2026) first signal. Q3 fiscal 2026 (November/December 2026) primary confirmation. Full fiscal year 2026 (February 2027) verdict.</span>
+                                </div>
+                                <a href="https://open.substack.com/pub/ermiasbraki/p/kohls-the-board-that-blinked-first?r=7c5afn&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="prediction-link" target="_blank">Read Full Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Kohl's posts at least one quarter of positive comparable sales before fiscal year end (January/February 2027). Bender remains CEO with no further executive-level governance disruption. Q3 fiscal 2026 shows continued improvement in the Kohl's card customer segment and proprietary brand performance.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Contingency:</span>
-                            <span class="prediction-value">Supplier finance program obligations exceeding $350M changes the read on cash flow recovery. Prediction revisited publicly if crossed.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">Q2 fiscal 2026 (August 2026) first signal. Q3 fiscal 2026 (November/December 2026) primary confirmation. Full fiscal year 2026 (February 2027) verdict.</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://open.substack.com/pub/ermiasbraki/p/kohls-the-board-that-blinked-first?r=7c5afn&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="prediction-link" target="_blank">Read Full Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">GameStop: Narrative &amp; Game Theory (Part 1 of 2)</h3>
-                        <div class="prediction-date">May 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Ryan Cohen is using the meme stock narrative engine to monetize GameStop's own shareholder base through equity dilution. The eBay pursuit is the mechanism: a target large enough to require massive share issuance, floated to a retail base conditioned to buy without asking what they're buying.</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-gamestop')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">GameStop: Narrative &amp; Game Theory (Part 1 of 2)</p>
+                                    <p class="acc-meta">May 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-gamestop">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-gamestop">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Ryan Cohen is using the meme stock narrative engine to monetize GameStop's own shareholder base through equity dilution. The eBay pursuit is the mechanism: a target large enough to require massive share issuance, floated to a retail base conditioned to buy without asking what they're buying.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">If Cohen abandons eBay without announcing an alternative acquisition of similar scale within 90 days, and market cap falls below $10B for 30 consecutive days, the narrative engine is not self-sustaining. Caveat: if eBay closes, shareholders may absorb the dilution, having already committed to the vision of a transformed GameStop.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">90 days from confirmed eBay rejection. Market cap below $10B for 30 consecutive days.</span>
+                                </div>
+                                <div class="prediction-detail" style="padding: 0.75rem 1rem; background: rgba(80,130,200,0.07); border-left: 3px solid rgba(80,130,200,0.4); border-radius: 2px;">
+                                    <span class="prediction-label">Update:</span>
+                                    <span class="prediction-value">June 16, 2026: A shareholder filed a class-action lawsuit in Delaware Chancery Court seeking to halt the vote on Cohen's $35 billion pay package, citing inadequate disclosures and disputed voting procedures. June 23, 2026: Cohen withdrew the pay package at his own request, framing it as a decision to keep leadership focused on operating performance and the eBay pursuit. The structural exposure this analysis identified, a governance contradiction between the pay incentive and the acquisition rationale, surfaced publicly within weeks of publication. Confirmation classification pending resolution of the eBay situation and market cap trajectory.</span>
+                                </div>
+                                <a href="https://open.substack.com/pub/ermiasbraki/p/gamestop-using-narrative-and-game?r=7c5afn&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="prediction-link" target="_blank">Read Full Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">If Cohen abandons eBay without announcing an alternative acquisition of similar scale within 90 days, and market cap falls below $10B for 30 consecutive days, the narrative engine is not self-sustaining. Caveat: if eBay closes, shareholders may absorb the dilution, having already committed to the vision of a transformed GameStop.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">90 days from confirmed eBay rejection. Market cap below $10B for 30 consecutive days.</span>
-                        </div>
-                        <div class="prediction-detail" style="margin-top: 0.75rem; padding: 0.75rem 1rem; background: rgba(80,130,200,0.07); border-left: 3px solid rgba(80,130,200,0.4); border-radius: 2px;">
-                            <span class="prediction-label">Update:</span>
-                            <span class="prediction-value">June 16, 2026: A shareholder filed a class-action lawsuit in Delaware Chancery Court seeking to halt the vote on Cohen's $35 billion pay package, citing inadequate disclosures and disputed voting procedures. June 23, 2026: Cohen withdrew the pay package at his own request, framing it as a decision to keep leadership focused on operating performance and the eBay pursuit. The structural exposure this analysis identified, a governance contradiction between the pay incentive and the acquisition rationale, surfaced publicly within weeks of publication. Confirmation classification pending resolution of the eBay situation and market cap trajectory.</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://open.substack.com/pub/ermiasbraki/p/gamestop-using-narrative-and-game?r=7c5afn&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="prediction-link" target="_blank">Read Full Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Dollar General CEO Transition</h3>
-                        <div class="prediction-date">March 24, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Board appointed JJ Fleeman (Ahold Delhaize USA CEO, 35 years in grocery and digital infrastructure) as successor to Todd Vasos, effective January 2027. Stock dropped 5% on announcement. DG trading at 17x earnings against a 31x market average despite Q4 same-store sales up 4.3% and operating profit up 106%.</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-dg')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Dollar General CEO Transition</p>
+                                    <p class="acc-meta">March 24, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-dg">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-dg">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Board appointed JJ Fleeman (Ahold Delhaize USA CEO, 35 years in grocery and digital infrastructure) as successor to Todd Vasos, effective January 2027. Stock dropped 5% on announcement. DG trading at 17x earnings against a 31x market average despite Q4 same-store sales up 4.3% and operating profit up 106%.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Gross margin continues expanding through fiscal 2026 as DG Fresh scales, shrink stabilizes, and SKU rationalization works through the system. Market does not reprice the thesis until Fleeman takes the seat. Stock jump follows the transition.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">January 2027 transition. Q2 and Q4 FY2026 earnings as margin markers.</span>
+                                </div>
+                                <a href="https://open.substack.com/pub/ermiasbraki/p/dollar-general-a-subtle-masterclass?utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link" target="_blank">Read Full Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Gross margin continues expanding through fiscal 2026 as DG Fresh scales, shrink stabilizes, and SKU rationalization works through the system. Market does not reprice the thesis until Fleeman takes the seat. Stock jump follows the transition.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">January 2027 transition. Q2 and Q4 FY2026 earnings as margin markers.</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://open.substack.com/pub/ermiasbraki/p/dollar-general-a-subtle-masterclass?utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link" target="_blank">Read Full Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">GoDaddy Customer Decline</h3>
-                        <div class="prediction-date">February 15, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Multi-year campaign anchoring brand in customer incompetence while stock down 58%, customer count declining 2.4% YoY. CEO and CFO both sold significant shares on the same day.</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-godaddy')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">GoDaddy Customer Decline</p>
+                                    <p class="acc-meta">February 15, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-godaddy">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-godaddy">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Multi-year campaign anchoring brand in customer incompetence while stock down 58%, customer count declining 2.4% YoY. CEO and CFO both sold significant shares on the same day.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">No return to positive customer growth in 2026. If still declining Q4 2026, acquisition conversations or strategic review by end of 2027.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">Q1 2026 (May), Q2 2026 (August), Q4 2026 (February 2027)</span>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_some-companies-dont-lose-customers-because-activity-7428497713337446400-eFS7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2IPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">No return to positive customer growth in 2026. If still declining Q4 2026, acquisition conversations or strategic review by end of 2027.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">Q1 2026 (May), Q2 2026 (August), Q4 2026 (February 2027)</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_some-companies-dont-lose-customers-because-activity-7428497713337446400-eFS7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2IPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Workday CEO Fourth Return</h3>
-                        <div class="prediction-date">February 11, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Aneel Bhusri returning as CEO for fourth time</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-workday')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Workday CEO Fourth Return</p>
+                                    <p class="acc-meta">February 11, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-workday">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-workday">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Aneel Bhusri returning as CEO for fourth time</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Bhusri steps back again within 24 months. Board still solving wrong problem.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">By February 2028</span>
+                                </div>
+                                <a href="https://open.substack.com/pub/ermiasbraki/p/workday-the-fourth-return-and-the?utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link">Read Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Bhusri steps back again within 24 months. Board still solving wrong problem.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">By February 2028</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://open.substack.com/pub/ermiasbraki/p/workday-the-fourth-return-and-the?utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link">Read Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Salesforce Executive Exodus</h3>
-                        <div class="prediction-date">February 12, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Crisis:</span>
-                            <span class="prediction-value">5 executives left in 2 months. 1,400 employees signed letter. Stock down 27%.</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-salesforce')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Salesforce Executive Exodus</p>
+                                    <p class="acc-meta">February 12, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-salesforce">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-salesforce">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Crisis:</span>
+                                    <span class="prediction-value">5 executives left in 2 months. 1,400 employees signed letter. Stock down 27%.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Benioff hedges. Feb 25: vague statements. Q1 2027: more departures, another committee.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">Feb 25, 2026 &amp; Q1 2027</span>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_time-to-play-ceo-for-a-day-imagine-youre-activity-7427686695409733632-aqZu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2IPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Benioff hedges. Feb 25: vague statements. Q1 2027: more departures, another committee.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">Feb 25, 2026 &amp; Q1 2027</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_time-to-play-ceo-for-a-day-imagine-youre-activity-7427686695409733632-aqZu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSEjCEB0OmWBr2IPb7iTlDovEFP22NJ7ME" class="prediction-link">Read Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Super Bowl 2026 Narrative Risk Report Card</h3>
-                        <div class="prediction-date">February 9, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Analysis:</span>
-                            <span class="prediction-value">Tracked 9 Super Bowl LX advertisers using Board Approval vs Market Defense scoring. Gap 0 (aligned): 3 brands. Gap 2-3 (severe risk): 6 brands.</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-superbowl')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Super Bowl 2026 Narrative Risk Report Card</p>
+                                    <p class="acc-meta">February 9, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-superbowl">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-superbowl">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Analysis:</span>
+                                    <span class="prediction-value">Tracked 9 Super Bowl LX advertisers using Board Approval vs Market Defense scoring. Gap 0 (aligned): 3 brands. Gap 2-3 (severe risk): 6 brands.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Featured:</span>
+                                    <span class="prediction-value">GLP-1 Drug War (Novo vs Hims vs Ro), Meta/Oakley vs Ring privacy contrast, Vital Farms' $500k hedge that got 1 global mention</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Predictions:</span>
+                                    <span class="prediction-value">Q4 2026 metrics and Feb 2027 outcomes for all 9 brands. Check back to validate. One prediction (Novo/Hims) confirmed March 2026, one year early.</span>
+                                </div>
+                                <a href="https://medium.com/@ermiasbraki/super-bowl-2026-narrative-risk-report-card-board-approval-vs-market-defense-fa06d37cc3a3" class="prediction-link">Read Full Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Featured:</span>
-                            <span class="prediction-value">GLP-1 Drug War (Novo vs Hims vs Ro), Meta/Oakley vs Ring privacy contrast, Vital Farms' $500k hedge that got 1 global mention</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Predictions:</span>
-                            <span class="prediction-value">Q4 2026 metrics and Feb 2027 outcomes for all 9 brands. Check back to validate. One prediction (Novo/Hims) confirmed March 2026, one year early.</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://medium.com/@ermiasbraki/super-bowl-2026-narrative-risk-report-card-board-approval-vs-market-defense-fa06d37cc3a3" class="prediction-link">Read Full Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Pandora Commodity Strategy</h3>
-                        <div class="prediction-date">February 5, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">New CEO swaps silver for platinum to escape commodity volatility</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-pandora')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Pandora Commodity Strategy</p>
+                                    <p class="acc-meta">February 5, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-pandora">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-pandora">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">New CEO swaps silver for platinum to escape commodity volatility</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Q4 2026: Margins stay compressed OR consumer resistance to platinum-plated OR demand decline continues</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">Q4 2026 earnings (February 2027)</span>
+                                </div>
+                                <a href="https://medium.com/@ermiasbraki/pandora-when-platinum-cant-save-what-silver-built-838c618e7d8f" class="prediction-link">Read Full Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Q4 2026: Margins stay compressed OR consumer resistance to platinum-plated OR demand decline continues</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">Q4 2026 earnings (February 2027)</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://medium.com/@ermiasbraki/pandora-when-platinum-cant-save-what-silver-built-838c618e7d8f" class="prediction-link">Read Full Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Target CEO Transition</h3>
-                        <div class="prediction-date">February 1, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">23 year insider promoted over external disruption</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-target')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Target CEO Transition</p>
+                                    <p class="acc-meta">February 1, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-target">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-target">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">23 year insider promoted over external disruption</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Operational improvements without strategic repositioning. Sales remain flat through 2026.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">Q4 2026 earnings</span>
+                                </div>
+                                <a href="https://open.substack.com/pub/ermiasbraki/p/targets-ceo-transition-when-continuity?utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link">Read Full Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Operational improvements without strategic repositioning. Sales remain flat through 2026.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">Q4 2026 earnings</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://open.substack.com/pub/ermiasbraki/p/targets-ceo-transition-when-continuity?utm_campaign=post-expanded-share&utm_medium=web" class="prediction-link">Read Full Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">PayPal CEO Appointment</h3>
-                        <div class="prediction-date">February 4, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Cost-cutter replaces growth CEO after 2.5 years</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-paypal')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">PayPal CEO Appointment</p>
+                                    <p class="acc-meta">February 4, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-paypal">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-paypal">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Cost-cutter replaces growth CEO after 2.5 years</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Margins improve but revenue continues declining. Product problem disguised as execution issue.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">Q3 2027</span>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6?utm_source=share&utm_medium=member_desktop" class="prediction-link">Read Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Margins improve but revenue continues declining. Product problem disguised as execution issue.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">Q3 2027</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6?utm_source=share&utm_medium=member_desktop" class="prediction-link">Read Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Disney CEO Appointment</h3>
-                        <div class="prediction-date">February 4, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Parks chief promoted over content leader</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-disney')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Disney CEO Appointment</p>
+                                    <p class="acc-meta">February 4, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-disney">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-disney">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Parks chief promoted over content leader</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Parks continue performing on legacy IP. Content pipeline stays broken. Future attractions lack foundation.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">2028</span>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6?utm_source=share&utm_medium=member_desktop" class="prediction-link">Read Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Parks continue performing on legacy IP. Content pipeline stays broken. Future attractions lack foundation.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">2028</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://www.linkedin.com/posts/ermias-braki-115a62336_disney-and-paypal-both-announced-new-ceos-activity-7424782530748358656-ym-6?utm_source=share&utm_medium=member_desktop" class="prediction-link">Read Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">Jaguar Rebrand</h3>
-                        <div class="prediction-date">November 2024 - 2029</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Destroyed 102 years of heritage. Stopped all production. Ultra-luxury repositioning without brand equity.</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-jaguar')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">Jaguar Rebrand</p>
+                                    <p class="acc-meta">November 2024 - 2029 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-jaguar">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-jaguar">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Destroyed 102 years of heritage. Stopped all production. Ultra-luxury repositioning without brand equity.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">First-year sales under 5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">2026 sales, 2027 review, 2029 survival</span>
+                                </div>
+                                <a href="https://medium.com/@ermiasbraki/jaguar-will-fail-by-2029-when-leaders-optimize-for-approval-over-defense-e87c3d4ed5f9" class="prediction-link">Read Full Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">First-year sales under 5k units vs 10k target. Strategic review late 2027. Brand dead or sold by 2029.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">2026 sales, 2027 review, 2029 survival</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://medium.com/@ermiasbraki/jaguar-will-fail-by-2029-when-leaders-optimize-for-approval-over-defense-e87c3d4ed5f9" class="prediction-link">Read Full Analysis</a>
                     </div>
 
-                    <div class="prediction-card">
-                        <h3 class="prediction-title">UPS Amazon Exit</h3>
-                        <div class="prediction-date">February 2, 2026</div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Decision:</span>
-                            <span class="prediction-value">Cut 78k jobs, ended Amazon partnership (1B+ packages/year), $6.5B cost cuts</span>
+                    <div class="acc-item">
+                        <button class="acc-trigger" onclick="toggleAcc('acc-ups')">
+                            <div class="acc-left">
+                                <span class="status-dot"></span>
+                                <div>
+                                    <p class="acc-title">UPS Amazon Exit</p>
+                                    <p class="acc-meta">February 2, 2026 &middot; In Progress</p>
+                                </div>
+                            </div>
+                            <i class="acc-chevron" id="chev-acc-ups">&#9660;</i>
+                        </button>
+                        <div class="acc-panel" id="acc-ups">
+                            <div class="acc-panel-inner">
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Decision:</span>
+                                    <span class="prediction-value">Cut 78k jobs, ended Amazon partnership (1B+ packages/year), $6.5B cost cuts</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Prediction:</span>
+                                    <span class="prediction-value">Lost $2.2B contribution to fixed costs. Network utilization problems. Can't replace Amazon volume. Margins flat/down by Q4 2026.</span>
+                                </div>
+                                <div class="prediction-detail">
+                                    <span class="prediction-label">Falsifiable:</span>
+                                    <span class="prediction-value">Q4 2026 earnings (Feb 2027)</span>
+                                </div>
+                                <a href="https://medium.com/@ermiasbraki/ups-cuts-30-000-jobs-to-end-amazon-partnership-bold-leadership-or-cost-cutting-disguised-as-4ce026c5df31" class="prediction-link">Read Full Analysis</a>
+                            </div>
                         </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Prediction:</span>
-                            <span class="prediction-value">Lost $2.2B contribution to fixed costs. Network utilization problems. Can't replace Amazon volume. Margins flat/down by Q4 2026.</span>
-                        </div>
-                        <div class="prediction-detail">
-                            <span class="prediction-label">Falsifiable:</span>
-                            <span class="prediction-value">Q4 2026 earnings (Feb 2027)</span>
-                        </div>
-                        <div class="prediction-status"><span class="status-dot"></span>In Progress</div>
-                        <a href="https://medium.com/@ermiasbraki/ups-cuts-30-000-jobs-to-end-amazon-partnership-bold-leadership-or-cost-cutting-disguised-as-4ce026c5df31" class="prediction-link">Read Full Analysis</a>
                     </div>
 
                 </div>
@@ -1093,5 +1248,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleAcc(id) {
+            const panel = document.getElementById(id);
+            const chev = document.getElementById('chev-' + id);
+            const isOpen = panel.classList.contains('open');
+            panel.classList.toggle('open', !isOpen);
+            if (chev) chev.classList.toggle('open', !isOpen);
+        }
+    </script>
 </body>
 </html>
